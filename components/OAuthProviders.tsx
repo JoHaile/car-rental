@@ -1,0 +1,21 @@
+import React from "react";
+import { Button } from "./ui/button";
+import Image from "next/image";
+
+function OAuthProviders() {
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      <Button variant="outline" type="button" className="w-full">
+        <Image src="/github.svg" alt="github logo" width={30} height={30} />
+        <span className="sr-only">Login with Github</span>
+      </Button>
+
+      <Button variant="outline" type="button" className="w-full">
+        <Image src="/google.svg" alt="google logo" width={30} height={30} />
+        <span className="sr-only">Login with Google</span>
+      </Button>
+    </div>
+  );
+}
+
+export default OAuthProviders;
