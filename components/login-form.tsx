@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,13 +8,30 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import Image from "next/image";
 import OAuthProviders from "./OAuthProviders";
+import { useActionState, useEffect } from "react";
+import { logInAction } from "@/lib/auth/action";
+import { toast } from "sonner";
 
 export function LoginForm() {
+  const initialState = {
+    email: "",
+    password: "",
+    errorMessage: "",
+  };
+  const [state, formAction, isPending] = useActionState(
+    logInAction,
+    initialState
+  );
+
+  useEffect(() => {
+    state?.errorMessage && toast.error(state.errorMessage);
+  }, [state?.errorMessage]);
+
   return (
-    <div className={cn("flex flex-col gap-6" )} >
+    <div className={cn("flex flex-col gap-6")}>
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
-          <form className="p-6 md:p-8">
+          <form action={formAction} className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
@@ -25,7 +44,9 @@ export function LoginForm() {
                 <Input
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="m@example.com"
+                  defaultValue={state.email}
                   required
                 />
               </div>
@@ -39,10 +60,10 @@ export function LoginForm() {
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required />
+                <Input id="password" type="password" name="password" required />
               </div>
-              <Button type="submit" className="w-full">
-                Login
+              <Button type="submit" className="w-full" disabled={isPending}>
+                {isPending ? "Loading..." : "Login"}
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">

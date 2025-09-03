@@ -10,6 +10,7 @@ import Image from "next/image";
 import { useActionState, useEffect } from "react";
 import { signUpAction } from "@/lib/auth/action";
 import OAuthProviders from "./OAuthProviders";
+import { toast, Toaster } from "sonner";
 
 export function SignUpForm() {
   const initialState = {
@@ -23,9 +24,8 @@ export function SignUpForm() {
     initialState
   );
 
-  //Todo: use Toaster component to show the error
   useEffect(() => {
-    state?.errorMessage && alert(state.errorMessage);
+    state?.errorMessage && toast.error(state.errorMessage);
   }, [state?.errorMessage]);
 
   return (
