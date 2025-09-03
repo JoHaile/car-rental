@@ -5,7 +5,6 @@ export default async function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4">
       <Button>Click Me</Button>
-      <ModeToggle />
       <h1>My Blog Post</h1>
       <article>
         <h1>My Blog Post</h1>
