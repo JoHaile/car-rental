@@ -23,6 +23,7 @@ export function SignUpForm() {
     initialState
   );
 
+  //Todo: use Toaster component to show the error
   useEffect(() => {
     state?.errorMessage && alert(state.errorMessage);
   }, [state?.errorMessage]);

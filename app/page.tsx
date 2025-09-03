@@ -9,6 +9,8 @@ export default async function Home() {
       <h1>My Blog Post</h1>
       <article>
         <h1>My Blog Post</h1>
+        <h2>My Blog Post</h2>
+        <h3>My Blog Post</h3>
         <p>This is a paragraph with default typographic styles.</p>
         <ul>
           <li>List item 1</li>
