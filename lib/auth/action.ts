@@ -24,7 +24,7 @@ export const logInAction = async (prevState: unknown, formData: FormData) => {
       return {
         email,
         password,
-        errorMessage: error.body?.message,
+        errorMessage: error.message,
       };
     }
   }
@@ -60,4 +60,16 @@ export const signUpAction = async (prevState: unknown, formData: FormData) => {
   }
 
   redirect("/dashboard");
+};
+
+export const signOutAction = async () => {
+  try {
+    await auth.api.signOut({ headers: await headers() });
+  } catch (error) {
+    if (error instanceof APIError) {
+      console.log(error.message);
+    }
+  }
+
+  redirect("/login");
 };

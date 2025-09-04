@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "./(main)/NavBar";
+import Footer from "./(main)/Footer";
 import { Toaster } from "sonner";
 
 const geistSans = Geist({
@@ -36,11 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="max-w-[1500px] m-auto">
-            <NavBar />
-            {children}
-            <Footer />
-          </main>
+          <main className="max-w-[1500px] m-auto">{children}</main>
           <Toaster
             closeButton
             position="top-center"

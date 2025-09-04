@@ -6,6 +6,7 @@ import React, { ReactNode } from "react";
 interface Props {
   children: Readonly<ReactNode>;
 }
+
 function layout({ children }: Props) {
   return (
     <div>
