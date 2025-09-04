@@ -44,7 +44,6 @@ export const signUpAction = async (prevState: unknown, formData: FormData) => {
         name: fullName,
         email,
         password,
-        // callbackURL: "/dashboard",
       },
       headers: await headers(),
     });

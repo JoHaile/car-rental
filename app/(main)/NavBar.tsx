@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import getServerSession from "@/lib/auth/get-server-session";
-import { Mail, ShieldIcon, User2, UserCircle2 } from "lucide-react";
+import { Mail, ShieldIcon, UserCircle2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -40,13 +40,11 @@ async function NavBar() {
           <div>
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <div className="flex gap-4 items-center px-3 py-1 rounded-sm cursor-pointer hover:bg-muted">
+                <div className="bg-muted flex gap-2 items-center px-2 py-1 rounded-sm cursor-pointer">
                   <Avatar className="size-10">
-                    <AvatarImage
-                      src={user?.image ? user?.image : "/hero.webp"}
-                    />
+                    <AvatarImage src={user?.image ? user?.image : undefined} />
                     <AvatarFallback>
-                      <UserCircle2 />
+                      <UserCircle2 className="size-3/4" />
                     </AvatarFallback>
                   </Avatar>
 

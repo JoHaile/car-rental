@@ -1,3 +1,5 @@
+"use client";
+
 import { signOutAction } from "@/lib/auth/action";
 import { Button } from "./ui/button";
 

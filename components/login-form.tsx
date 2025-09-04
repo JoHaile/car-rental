@@ -25,7 +25,7 @@ export function LoginForm() {
 
   useEffect(() => {
     state?.errorMessage && toast.error(state.errorMessage);
-  }, [state?.errorMessage]);
+  }, [state]);
 
   return (
     <div className={cn("flex flex-col gap-6")}>
