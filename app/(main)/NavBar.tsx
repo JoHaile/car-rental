@@ -20,7 +20,7 @@ async function NavBar() {
   const user = session?.user;
 
   return (
-    <header className=" h-16 flex items-center justify-between px-8">
+    <header className="h-16 flex items-center justify-between px-8 py-2">
       <div>Brand</div>
 
       <ul className="flex gap-8">
@@ -40,7 +40,7 @@ async function NavBar() {
           <div>
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <div className="flex gap-4 items-center px-3 py-1 rounded-sm cursor-pointer hover:bg-muted">
+                <div className="flex gap-4 items-center px-3 py-1 outline-1 outline-muted rounded-sm cursor-pointer hover:bg-muted">
                   <Avatar className="size-10">
                     <AvatarImage
                       src={user?.image ? user?.image : "/hero.webp"}
@@ -67,20 +67,15 @@ async function NavBar() {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <ShieldIcon />
-                  Customer
+                  {user?.role}
                 </DropdownMenuItem>
 
-                <DropdownMenuLabel className="pt-5">Language</DropdownMenuLabel>
+                <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
                 <DropdownMenuSeparator className="mb-2" />
-                <span className="pl-1">
+                <div className="px-2 flex justify-between">
                   <Button variant={"outline"}>EN</Button>
-                </span>
-
-                <DropdownMenuLabel className="pt-5">Themes</DropdownMenuLabel>
-                <DropdownMenuSeparator className="mb-2" />
-                <span className="pl-1">
                   <ModeToggle />
-                </span>
+                </div>
 
                 <span className="flex flex-col pt-4">
                   <SignOut />
@@ -91,7 +86,7 @@ async function NavBar() {
         ) : (
           <div className="flex gap-4 items-center">
             <Button variant={"outline"}>EN</Button>
-
+            <ModeToggle />
             <Link href="/signup">
               <Button>Sign In/Up</Button>
             </Link>
