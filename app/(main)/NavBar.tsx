@@ -1,5 +1,5 @@
-import { ModeToggle } from "@/components/dark-mode";
-import SignOut from "@/components/SignOut";
+import { ModeToggle } from "@/components/theme/dark-mode";
+import SignOut from "@/components/auth/SignOut";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,7 +11,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import getServerSession from "@/lib/auth/get-server-session";
-import { Mail, ShieldIcon, User2, UserCircle2 } from "lucide-react";
+import {
+  ChevronDown,
+  Mail,
+  ShieldIcon,
+  User2,
+  UserCircle2,
+} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -20,7 +26,7 @@ async function NavBar() {
   const user = session?.user;
 
   return (
-    <header className="h-16 flex items-center justify-between px-8 py-2">
+    <header className="h-16 flex items-center justify-between px-3 md:px-8 py-2">
       <div>Brand</div>
 
       <ul className="flex gap-8">
@@ -28,9 +34,15 @@ async function NavBar() {
           <Link
             key={page.href}
             href={page.href}
-            className="hover:text-primary transition-all duration-200"
+            className="hover:text-primary transition-all duration-200 flex items-center "
           >
-            {page.label}
+            {page.label === "Company" ? (
+              <span className="flex gap-2 items-center">
+                <span>{page.label}</span> <ChevronDown />
+              </span>
+            ) : (
+              page.label
+            )}
           </Link>
         ))}
       </ul>
@@ -39,12 +51,11 @@ async function NavBar() {
         {session ? (
           <div>
             <DropdownMenu>
-              <DropdownMenuTrigger>
-                <div className="flex gap-4 items-center px-3 py-1 outline-1 outline-muted rounded-sm cursor-pointer hover:bg-muted">
-                  <Avatar className="size-10">
-                    <AvatarImage
-                      src={user?.image ? user?.image : "/hero.webp"}
-                    />
+              <DropdownMenuTrigger asChild>
+                {/* <div className="flex gap-4 items-center px-3 py-1 outline-1 outline-muted rounded-sm cursor-pointer hover:bg-muted"> */}
+                <Button variant="outline" className="px-3 h-10 rounded-full">
+                  <Avatar>
+                    <AvatarImage src={user?.image ? user?.image : undefined} />
                     <AvatarFallback>
                       <UserCircle2 />
                     </AvatarFallback>
@@ -53,7 +64,8 @@ async function NavBar() {
                   <div className="flex flex-col">
                     <span>{user?.name}</span>
                   </div>
-                </div>
+                </Button>
+                {/* </div> */}
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuLabel>Account</DropdownMenuLabel>

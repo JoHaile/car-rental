@@ -29,7 +29,7 @@ export const logInAction = async (prevState: unknown, formData: FormData) => {
     }
   }
 
-  redirect("/dashboard");
+  redirect("/");
 };
 export const signUpAction = async (prevState: unknown, formData: FormData) => {
   const { fullName, email, password } = {
@@ -44,7 +44,6 @@ export const signUpAction = async (prevState: unknown, formData: FormData) => {
         name: fullName,
         email,
         password,
-        // callbackURL: "/dashboard",
       },
       headers: await headers(),
     });
@@ -59,7 +58,7 @@ export const signUpAction = async (prevState: unknown, formData: FormData) => {
     }
   }
 
-  redirect("/dashboard");
+  redirect("/");
 };
 
 export const signOutAction = async () => {

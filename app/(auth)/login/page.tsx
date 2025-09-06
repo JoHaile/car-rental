@@ -1,4 +1,4 @@
-import { LoginForm } from "@/components/login-form";
+import { LoginForm } from "@/components/auth/login-form";
 import getServerSession from "@/lib/auth/get-server-session";
 import { redirect } from "next/navigation";
 

@@ -1,4 +1,4 @@
-import { SignUpForm } from "@/components/signup-form";
+import { SignUpForm } from "@/components/auth/signup-form";
 import getServerSession from "@/lib/auth/get-server-session";
 import { redirect } from "next/navigation";
 import React from "react";
