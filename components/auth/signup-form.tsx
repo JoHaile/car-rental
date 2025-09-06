@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useActionState, useEffect } from "react";
 import { signUpAction } from "@/lib/auth/action";
 import OAuthProviders from "./OAuthProviders";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 export function SignUpForm() {
   const initialState = {

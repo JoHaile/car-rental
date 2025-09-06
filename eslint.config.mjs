@@ -18,6 +18,13 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "app/generated/**",
+      "public/**",
+      "components/login-form.tsx",
+      "components/signup-form.tsx",
+      "prisma/**",
+      "*.prisma",
+      "generated/prisma/**",
     ],
   },
 ];

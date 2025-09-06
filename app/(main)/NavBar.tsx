@@ -57,7 +57,7 @@ async function NavBar() {
                   <Avatar>
                     <AvatarImage src={user?.image ? user?.image : undefined} />
                     <AvatarFallback>
-                      <UserCircle2 />
+                      <UserCircle2 className="size-3/4" />
                     </AvatarFallback>
                   </Avatar>
 
