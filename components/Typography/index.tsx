@@ -7,7 +7,7 @@ interface Props {
 export function H1({ children, className }: Props) {
   return (
     <h1
-      className={`scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance ${className}`}
+      className={`scroll-m-20 text-4xl font-extrabold tracking-tight text-balance ${className}`}
     >
       {children}
     </h1>

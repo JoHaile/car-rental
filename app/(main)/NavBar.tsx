@@ -11,13 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import getServerSession from "@/lib/auth/get-server-session";
-import {
-  ChevronDown,
-  Mail,
-  ShieldIcon,
-  User2,
-  UserCircle2,
-} from "lucide-react";
+import { ChevronDown, Mail, ShieldIcon, UserCircle2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -34,7 +28,7 @@ async function NavBar() {
           <Link
             key={page.href}
             href={page.href}
-            className="hover:text-primary transition-all duration-200 flex items-center "
+            className="hover:text-primary transition-all duration-150"
           >
             {page.label === "Company" ? (
               <span className="flex gap-2 items-center">
@@ -111,11 +105,11 @@ async function NavBar() {
 
 const pageLinks = [
   { label: "Home", href: "/" },
-  { label: "Vehicles", href: "/Vehicles" },
-  { label: "Company", href: "/Company" },
-  { label: "About Us", href: "/About" },
-  { label: "Contact", href: "/contact" },
+  { label: "Vehicles", href: "/vehicles" },
+  { label: "Company", href: "/company" },
   // { label: "Business", href: "/business" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default NavBar;

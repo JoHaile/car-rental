@@ -3,8 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@plugin "@tailwindcss/typography";
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -95,7 +93,7 @@
   --muted-foreground: oklch(0.705 0.015 286.067);
   --accent: oklch(0.274 0.006 286.033);
   --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
+  --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.541 0.281 293.009);
@@ -120,10 +118,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-  article {
-    @apply prose;
-    @apply dark:prose-invert;
-    @apply prose-neutral;
   }
 }
