@@ -24,9 +24,9 @@ function Hero() {
           Find Your Perfect Rental Car.
         </H1>
         <p className="mt-4 leading-relaxed md:text-xl opacity-80">
-          Skip the hassle and get on the road faster. Whether you're planning a
-          quick trip or a long road trip, we offer a wide range of reliable and
-          affordable cars designed to get you where you need to go.
+          Skip the hassle and get on the road faster. Whether you&apos;re
+          planning a quick trip or a long road trip, we offer a wide range of
+          reliable and affordable cars designed to get you where you need to go.
         </p>
         <div className="space-x-8">
           <Link href="/vehicles">
