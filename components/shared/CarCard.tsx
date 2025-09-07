@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 
+//todo: give this component the car object as a Prop
 function CarCard() {
   return (
     <Card className="max-w-[300px] md:max-w-[320px] lg:max-w-[350px] pt-0 overflow-hidden relative mb-5">
