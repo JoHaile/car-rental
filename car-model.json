@@ -1,0 +1,1630 @@
+[
+  {
+    "id": "2c9d8e7c-a4f6-4b2a-8c5e-8a1f4b3c2d4a",
+    "manufacture": "Toyota",
+    "model": "Corolla",
+    "year": 2022,
+    "licensePlate": "5B7A9P2E",
+    "pricePerDay": 2500,
+    "isAvailable": true,
+    "description": "A reliable, fuel-efficient sedan, ideal for city and long-distance travel.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/toyota-corolla-front.jpg",
+      "https://example.com/images/toyota-corolla-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 169,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "f9a7b5d1-e6c9-4f3d-9b8a-3e5f2a1b9d4c",
+    "manufacture": "Ford",
+    "model": "Escape",
+    "year": 2021,
+    "licensePlate": "9R5T2U8B",
+    "pricePerDay": 3000,
+    "isAvailable": false,
+    "description": "A compact SUV offering versatility and modern technology for urban and suburban adventures.",
+    "mileage": 25000,
+    "imageUrls": [
+      "https://example.com/images/ford-escape-exterior.jpg",
+      "https://example.com/images/ford-escape-cabin.jpg"
+    ],
+    "features": {
+      "enginePower": 181,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "manufacture": "BMW",
+    "model": "X5",
+    "year": 2023,
+    "licensePlate": "1H4Y6Z9W",
+    "pricePerDay": 5000,
+    "isAvailable": true,
+    "description": "A luxury mid-size SUV with high-performance capabilities and a premium interior.",
+    "mileage": 7500,
+    "imageUrls": [
+      "https://example.com/images/bmw-x5-front.jpg",
+      "https://example.com/images/bmw-x5-side.jpg"
+    ],
+    "features": {
+      "enginePower": 335,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "e8f7d6a5-b4c3-d2e1-f0a9-b8c7d6e5f4a3",
+    "manufacture": "Hyundai",
+    "model": "Tucson",
+    "year": 2021,
+    "licensePlate": "B2C5E7F1",
+    "pricePerDay": 2800,
+    "isAvailable": true,
+    "description": "A stylish and practical SUV with a comfortable ride and generous cargo space.",
+    "mileage": 21000,
+    "imageUrls": [
+      "https://example.com/images/hyundai-tucson.jpg",
+      "https://example.com/images/hyundai-tucson-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 187,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "5d4c3b2a-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Mercedes-Benz",
+    "model": "C-Class",
+    "year": 2022,
+    "licensePlate": "G9H1J5K7",
+    "pricePerDay": 4500,
+    "isAvailable": true,
+    "description": "A compact luxury sedan that combines elegance, comfort, and advanced technology.",
+    "mileage": 9000,
+    "imageUrls": [
+      "https://example.com/images/mercedes-cclass-front.jpg",
+      "https://example.com/images/mercedes-cclass-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 255,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "8a7b6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+    "manufacture": "Mercedes-Benz",
+    "model": "E-Class",
+    "year": 2021,
+    "licensePlate": "L3M6N8P2",
+    "pricePerDay": 4200,
+    "isAvailable": true,
+    "description": "A refined mid-size luxury sedan, known for its sophisticated design and smooth ride.",
+    "mileage": 12000,
+    "imageUrls": [
+      "https://example.com/images/mercedes-eclass-exterior.jpg",
+      "https://example.com/images/mercedes-eclass-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 255,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "b1c2d3e4-f5a6-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Mercedes-Benz",
+    "model": "GLA",
+    "year": 2020,
+    "licensePlate": "Q4R7S9T3",
+    "pricePerDay": 3900,
+    "isAvailable": true,
+    "description": "Compact luxury SUV with agility, elegance, and advanced infotainment for upscale urban driving.",
+    "mileage": 30000,
+    "imageUrls": [
+      "https://example.com/images/mercedes-gla-front.jpg",
+      "https://example.com/images/mercedes-gla-side.jpg"
+    ],
+    "features": {
+      "enginePower": 221,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "e0e1f2f3-g4h5-6i7j-8k9l-0m1n2o3p4q5r",
+    "manufacture": "Honda",
+    "model": "Civic",
+    "year": 2022,
+    "licensePlate": "A1B2C3D4",
+    "pricePerDay": 2600,
+    "isAvailable": true,
+    "description": "A popular compact sedan known for its reliability and fuel efficiency. A great choice for daily commuting.",
+    "mileage": 10500,
+    "imageUrls": [
+      "https://example.com/images/honda-civic-exterior.jpg",
+      "https://example.com/images/honda-civic-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 158,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "f5e4d3c2-b1a0-9e8d-7c6b-5a4d3c2b1a0f",
+    "manufacture": "Chevrolet",
+    "model": "Traverse",
+    "year": 2023,
+    "licensePlate": "G5H6J7K8",
+    "pricePerDay": 3500,
+    "isAvailable": true,
+    "description": "A spacious and comfortable SUV perfect for families and group travel, with ample cargo room.",
+    "mileage": 8000,
+    "imageUrls": [
+      "https://example.com/images/chevrolet-traverse-front.jpg",
+      "https://example.com/images/chevrolet-traverse-rear.jpg"
+    ],
+    "features": {
+      "enginePower": 310,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "c1d2e3f4-g5h6-7i8j-9k0l-1m2n3o4p5q6r",
+    "manufacture": "Nissan",
+    "model": "Rogue",
+    "year": 2021,
+    "licensePlate": "N1P2Q3R4",
+    "pricePerDay": 2900,
+    "isAvailable": true,
+    "description": "A versatile compact SUV with a smooth ride and a suite of advanced safety features.",
+    "mileage": 22000,
+    "imageUrls": [
+      "https://example.com/images/nissan-rogue-exterior.jpg",
+      "https://example.com/images/nissan-rogue-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 181,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "9a8b7c6d-5e4f-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Volkswagen",
+    "model": "Jetta",
+    "year": 2020,
+    "licensePlate": "S5T6U7V8",
+    "pricePerDay": 2400,
+    "isAvailable": true,
+    "description": "A practical and stylish sedan with a comfortable interior and a surprisingly sporty feel.",
+    "mileage": 35000,
+    "imageUrls": [
+      "https://example.com/images/volkswagen-jetta-front.jpg",
+      "https://example.com/images/volkswagen-jetta-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 147,
+      "seatingCapacity": 5,
+      "transmission": "MANUAL",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "7b6a5d4c-3e2f-1a0b-9c8d-7e6f5a4b3c2d",
+    "manufacture": "Subaru",
+    "model": "Forester",
+    "year": 2022,
+    "licensePlate": "W9X1Y2Z3",
+    "pricePerDay": 3100,
+    "isAvailable": true,
+    "description": "An all-wheel-drive SUV known for its safety features and off-road capability.",
+    "mileage": 14000,
+    "imageUrls": [
+      "https://example.com/images/subaru-forester-exterior.jpg",
+      "https://example.com/images/subaru-forester-cabin.jpg"
+    ],
+    "features": {
+      "enginePower": 182,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "4e3d2c1b-0a9b-8c7d-6e5f-4a3b2c1d0e9f",
+    "manufacture": "Audi",
+    "model": "A4",
+    "year": 2023,
+    "licensePlate": "C4D5E6F7",
+    "pricePerDay": 4800,
+    "isAvailable": true,
+    "description": "A stylish and technologically advanced luxury sedan with a smooth, quiet ride.",
+    "mileage": 6000,
+    "imageUrls": [
+      "https://example.com/images/audi-a4-front.jpg",
+      "https://example.com/images/audi-a4-side.jpg"
+    ],
+    "features": {
+      "enginePower": 201,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "2b1a0d9c-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Porsche",
+    "model": "911 Carrera",
+    "year": 2022,
+    "licensePlate": "P7Q8R9S1",
+    "pricePerDay": 12000,
+    "isAvailable": false,
+    "description": "An iconic sports car with breathtaking performance and a timeless design. A true driver's car.",
+    "mileage": 3000,
+    "imageUrls": [
+      "https://example.com/images/porsche-911-front.jpg",
+      "https://example.com/images/porsche-911-rear.jpg"
+    ],
+    "features": {
+      "enginePower": 379,
+      "seatingCapacity": 4,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "5f4e3d2c-1b0a-9d8c-7b6a-5f4e3d2c1b0f",
+    "manufacture": "Lexus",
+    "model": "RX 350",
+    "year": 2021,
+    "licensePlate": "T2U3V4W5",
+    "pricePerDay": 4000,
+    "isAvailable": true,
+    "description": "A luxurious and reliable mid-size SUV with a plush interior and a smooth ride.",
+    "mileage": 18000,
+    "imageUrls": [
+      "https://example.com/images/lexus-rx350-exterior.jpg",
+      "https://example.com/images/lexus-rx350-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 295,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "8a7b6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+    "manufacture": "Jaguar",
+    "model": "F-PACE",
+    "year": 2023,
+    "licensePlate": "X6Y7Z8A9",
+    "pricePerDay": 5200,
+    "isAvailable": true,
+    "description": "A performance SUV that combines the sporty handling of a sports car with the practicality of an SUV.",
+    "mileage": 5000,
+    "imageUrls": [
+      "https://example.com/images/jaguar-fpace-front.jpg",
+      "https://example.com/images/jaguar-fpace-side.jpg"
+    ],
+    "features": {
+      "enginePower": 247,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Tesla",
+    "model": "Model 3",
+    "year": 2022,
+    "licensePlate": "Z1A2B3C4",
+    "pricePerDay": 4500,
+    "isAvailable": true,
+    "description": "An all-electric sedan with a minimalist interior, impressive acceleration, and a long driving range.",
+    "mileage": 11000,
+    "imageUrls": [
+      "https://example.com/images/tesla-model3-front.jpg",
+      "https://example.com/images/tesla-model3-interior.jpg"
+    ],
+    "features": {
+      "enginePower": null,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "ELECTRIC",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "e9d8c7b6-a5f4-3d2c-1b0a-9e8d7c6b5a4d",
+    "manufacture": "Kia",
+    "model": "Telluride",
+    "year": 2023,
+    "licensePlate": "K9L8M7N6",
+    "pricePerDay": 3400,
+    "isAvailable": true,
+    "description": "A spacious and stylish three-row SUV with a premium feel and a host of standard features.",
+    "mileage": 9500,
+    "imageUrls": [
+      "https://example.com/images/kia-telluride-exterior.jpg",
+      "https://example.com/images/kia-telluride-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 291,
+      "seatingCapacity": 8,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "d3c2b1a0-9e8d-7c6b-5a4f-3e2d1c0b9a8e",
+    "manufacture": "Mazda",
+    "model": "CX-5",
+    "year": 2022,
+    "licensePlate": "P1Q2R3S4",
+    "pricePerDay": 2800,
+    "isAvailable": true,
+    "description": "A compact SUV that stands out with its elegant design and engaging driving dynamics.",
+    "mileage": 16000,
+    "imageUrls": [
+      "https://example.com/images/mazda-cx5-front.jpg",
+      "https://example.com/images/mazda-cx5-side.jpg"
+    ],
+    "features": {
+      "enginePower": 187,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "b1a0d9c8-e7f6-5d4c-3b2a-1c9d8e7f6d5c",
+    "manufacture": "Volvo",
+    "model": "XC90",
+    "year": 2021,
+    "licensePlate": "V5W6X7Y8",
+    "pricePerDay": 5500,
+    "isAvailable": true,
+    "description": "A sophisticated and safe luxury SUV with a minimalist design and a comfortable interior.",
+    "mileage": 19000,
+    "imageUrls": [
+      "https://example.com/images/volvo-xc90-front.jpg",
+      "https://example.com/images/volvo-xc90-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 250,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "HYBRID",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "3d2c1b0a-9e8f-7d6c-5b4a-3e2d1c9b8a7f",
+    "manufacture": "Jeep",
+    "model": "Grand Cherokee",
+    "year": 2023,
+    "licensePlate": "Z9A1B2C3",
+    "pricePerDay": 3800,
+    "isAvailable": true,
+    "description": "A rugged and capable SUV that combines off-road prowess with on-road comfort and style.",
+    "mileage": 6500,
+    "imageUrls": [
+      "https://example.com/images/jeep-grand-cherokee-front.jpg",
+      "https://example.com/images/jeep-grand-cherokee-side.jpg"
+    ],
+    "features": {
+      "enginePower": 293,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "e7d6c5b4-a3b2-1c0d-9e8f-7a6b5c4d3e2f",
+    "manufacture": "Ford",
+    "model": "Mustang",
+    "year": 2022,
+    "licensePlate": "F1G2H3J4",
+    "pricePerDay": 6000,
+    "isAvailable": true,
+    "description": "An iconic muscle car with a powerful engine, thrilling performance, and a classic design.",
+    "mileage": 5000,
+    "imageUrls": [
+      "https://example.com/images/ford-mustang-front.jpg",
+      "https://example.com/images/ford-mustang-rear.jpg"
+    ],
+    "features": {
+      "enginePower": 310,
+      "seatingCapacity": 4,
+      "transmission": "MANUAL",
+      "fuelType": "GASOLINE",
+      "carType": "COUPE"
+    }
+  },
+  {
+    "id": "c1b2a3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p",
+    "manufacture": "Honda",
+    "model": "CR-V",
+    "year": 2021,
+    "licensePlate": "L5M6N7P8",
+    "pricePerDay": 3000,
+    "isAvailable": true,
+    "description": "A versatile and reliable compact SUV known for its spacious interior and smooth handling.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/honda-crv-exterior.jpg",
+      "https://example.com/images/honda-crv-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 190,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Toyota",
+    "model": "RAV4",
+    "year": 2023,
+    "licensePlate": "Q9R1S2T3",
+    "pricePerDay": 3200,
+    "isAvailable": true,
+    "description": "A popular compact SUV with a rugged look and a comfortable, practical interior.",
+    "mileage": 7000,
+    "imageUrls": [
+      "https://example.com/images/toyota-rav4-front.jpg",
+      "https://example.com/images/toyota-rav4-side.jpg"
+    ],
+    "features": {
+      "enginePower": 203,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "7d6c5b4a-3e2f-1g0h-9i8j-7k6l5m4n3o2p",
+    "manufacture": "Nissan",
+    "model": "Altima",
+    "year": 2022,
+    "licensePlate": "U4V5W6X7",
+    "pricePerDay": 2700,
+    "isAvailable": true,
+    "description": "A mid-size sedan with a comfortable ride, modern technology, and a spacious cabin.",
+    "mileage": 13000,
+    "imageUrls": [
+      "https://example.com/images/nissan-altima-exterior.jpg",
+      "https://example.com/images/nissan-altima-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 188,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "1b2a3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6q",
+    "manufacture": "Hyundai",
+    "model": "Elantra",
+    "year": 2021,
+    "licensePlate": "Y8Z9A1B2",
+    "pricePerDay": 2500,
+    "isAvailable": true,
+    "description": "A stylish and affordable compact sedan with a comfortable interior and great fuel economy.",
+    "mileage": 25000,
+    "imageUrls": [
+      "https://example.com/images/hyundai-elantra-front.jpg",
+      "https://example.com/images/hyundai-elantra-side.jpg"
+    ],
+    "features": {
+      "enginePower": 147,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "e5f4d3c2-b1a0-9e8d-7c6b-5a4d3c2b1a0f",
+    "manufacture": "Kia",
+    "model": "Sorento",
+    "year": 2022,
+    "licensePlate": "C3D4E5F6",
+    "pricePerDay": 3300,
+    "isAvailable": true,
+    "description": "A mid-size SUV with a bold design and a premium interior, offering comfort and technology.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/kia-sorento-exterior.jpg",
+      "https://example.com/images/kia-sorento-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 191,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "Chevrolet",
+    "model": "Equinox",
+    "year": 2020,
+    "licensePlate": "H7J8K9L1",
+    "pricePerDay": 2900,
+    "isAvailable": true,
+    "description": "A compact SUV offering a comfortable ride, a quiet cabin, and user-friendly infotainment.",
+    "mileage": 30000,
+    "imageUrls": [
+      "https://example.com/images/chevrolet-equinox-front.jpg",
+      "https://example.com/images/chevrolet-equinox-side.jpg"
+    ],
+    "features": {
+      "enginePower": 170,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Audi",
+    "model": "Q5",
+    "year": 2023,
+    "licensePlate": "M2N3P4Q5",
+    "pricePerDay": 5000,
+    "isAvailable": true,
+    "description": "A luxurious and technologically advanced compact SUV with a refined interior and a smooth ride.",
+    "mileage": 8500,
+    "imageUrls": [
+      "https://example.com/images/audi-q5-exterior.jpg",
+      "https://example.com/images/audi-q5-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 201,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "5a4b3c2d-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Porsche",
+    "model": "Cayenne",
+    "year": 2022,
+    "licensePlate": "R6S7T8U9",
+    "pricePerDay": 8000,
+    "isAvailable": true,
+    "description": "A high-performance luxury SUV that combines the power of a sports car with the versatility of an SUV.",
+    "mileage": 6000,
+    "imageUrls": [
+      "https://example.com/images/porsche-cayenne-front.jpg",
+      "https://example.com/images/porsche-cayenne-side.jpg"
+    ],
+    "features": {
+      "enginePower": 335,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "7b6c5d4e-3f2a-1b0c-9d8e-7f6a5b4c3d2e",
+    "manufacture": "Lexus",
+    "model": "ES 350",
+    "year": 2021,
+    "licensePlate": "V1W2X3Y4",
+    "pricePerDay": 4200,
+    "isAvailable": true,
+    "description": "A mid-size luxury sedan with a smooth ride, a quiet cabin, and a spacious, comfortable interior.",
+    "mileage": 14000,
+    "imageUrls": [
+      "https://example.com/images/lexus-es350-exterior.jpg",
+      "https://example.com/images/lexus-es350-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 302,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "8a7b6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+    "manufacture": "Jaguar",
+    "model": "XE",
+    "year": 2022,
+    "licensePlate": "Z5A6B7C8",
+    "pricePerDay": 4900,
+    "isAvailable": false,
+    "description": "A compact luxury sedan with a sporty feel, precise handling, and a sophisticated design.",
+    "mileage": 9000,
+    "imageUrls": [
+      "https://example.com/images/jaguar-xe-front.jpg",
+      "https://example.com/images/jaguar-xe-side.jpg"
+    ],
+    "features": {
+      "enginePower": 247,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Tesla",
+    "model": "Model Y",
+    "year": 2023,
+    "licensePlate": "E9F1G2H3",
+    "pricePerDay": 5200,
+    "isAvailable": true,
+    "description": "An all-electric compact SUV with impressive range, fast charging, and advanced autopilot features.",
+    "mileage": 4500,
+    "imageUrls": [
+      "https://example.com/images/tesla-modely-front.jpg",
+      "https://example.com/images/tesla-modely-interior.jpg"
+    ],
+    "features": {
+      "enginePower": null,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "ELECTRIC",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Volkswagen",
+    "model": "Tiguan",
+    "year": 2022,
+    "licensePlate": "J4K5L6M7",
+    "pricePerDay": 3000,
+    "isAvailable": true,
+    "description": "A compact SUV with a spacious interior, a comfortable ride, and a stylish European design.",
+    "mileage": 17000,
+    "imageUrls": [
+      "https://example.com/images/volkswagen-tiguan-exterior.jpg",
+      "https://example.com/images/volkswagen-tiguan-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 184,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "e7d6c5b4-a3b2-1c0d-9e8f-7a6b5c4d3e2f",
+    "manufacture": "Audi",
+    "model": "A6",
+    "year": 2021,
+    "licensePlate": "N8P9Q1R2",
+    "pricePerDay": 5100,
+    "isAvailable": true,
+    "description": "A sophisticated mid-size luxury sedan with a high-tech cabin and a refined driving experience.",
+    "mileage": 13000,
+    "imageUrls": [
+      "https://example.com/images/audi-a6-front.jpg",
+      "https://example.com/images/audi-a6-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 248,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "BMW",
+    "model": "3 Series",
+    "year": 2022,
+    "licensePlate": "S3T4U5V6",
+    "pricePerDay": 4700,
+    "isAvailable": true,
+    "description": "A benchmark for sport sedans, offering a perfect balance of performance, handling, and luxury.",
+    "mileage": 8000,
+    "imageUrls": [
+      "https://example.com/images/bmw-3series-front.jpg",
+      "https://example.com/images/bmw-3series-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 255,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Chevrolet",
+    "model": "Camaro",
+    "year": 2023,
+    "licensePlate": "W7X8Y9Z1",
+    "pricePerDay": 5500,
+    "isAvailable": true,
+    "description": "A classic American muscle car with an aggressive design and a powerful engine for thrilling performance.",
+    "mileage": 4000,
+    "imageUrls": [
+      "https://example.com/images/chevrolet-camaro-front.jpg",
+      "https://example.com/images/chevrolet-camaro-rear.jpg"
+    ],
+    "features": {
+      "enginePower": 335,
+      "seatingCapacity": 4,
+      "transmission": "MANUAL",
+      "fuelType": "GASOLINE",
+      "carType": "COUPE"
+    }
+  },
+  {
+    "id": "5a4b3c2d-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Ford",
+    "model": "F-150",
+    "year": 2022,
+    "licensePlate": "A2B3C4D5",
+    "pricePerDay": 4000,
+    "isAvailable": true,
+    "description": "A rugged and capable full-size pickup truck, perfect for heavy-duty tasks and outdoor adventures.",
+    "mileage": 10000,
+    "imageUrls": [
+      "https://example.com/images/ford-f150-front.jpg",
+      "https://example.com/images/ford-f150-side.jpg"
+    ],
+    "features": {
+      "enginePower": 290,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "TRUCK"
+    }
+  },
+  {
+    "id": "7b6c5d4e-3f2a-1b0c-9d8e-7f6a5b4c3d2e",
+    "manufacture": "Honda",
+    "model": "Odyssey",
+    "year": 2021,
+    "licensePlate": "E6F7G8H9",
+    "pricePerDay": 3600,
+    "isAvailable": true,
+    "description": "A family-friendly minivan with a spacious interior, versatile seating, and a smooth ride.",
+    "mileage": 28000,
+    "imageUrls": [
+      "https://example.com/images/honda-odyssey-front.jpg",
+      "https://example.com/images/honda-odyssey-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 280,
+      "seatingCapacity": 8,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "MINIVAN"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Nissan",
+    "model": "Titan",
+    "year": 2022,
+    "licensePlate": "I1J2K3L4",
+    "pricePerDay": 3900,
+    "isAvailable": true,
+    "description": "A rugged full-size pickup truck known for its strong engine and comfortable, well-equipped cabin.",
+    "mileage": 12000,
+    "imageUrls": [
+      "https://example.com/images/nissan-titan-front.jpg",
+      "https://example.com/images/nissan-titan-side.jpg"
+    ],
+    "features": {
+      "enginePower": 400,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "TRUCK"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Volvo",
+    "model": "S60",
+    "year": 2023,
+    "licensePlate": "M5N6P7Q8",
+    "pricePerDay": 4500,
+    "isAvailable": true,
+    "description": "A compact luxury sedan with a modern design, a premium interior, and a strong emphasis on safety.",
+    "mileage": 5500,
+    "imageUrls": [
+      "https://example.com/images/volvo-s60-front.jpg",
+      "https://example.com/images/volvo-s60-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 247,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "7d6c5b4a-3e2f-1g0h-9i8j-7k6l5m4n3o2p",
+    "manufacture": "Jeep",
+    "model": "Wrangler",
+    "year": 2022,
+    "licensePlate": "R9S1T2U3",
+    "pricePerDay": 4200,
+    "isAvailable": false,
+    "description": "An off-road legend with an iconic design, removable top and doors, and true go-anywhere capability.",
+    "mileage": 10000,
+    "imageUrls": [
+      "https://example.com/images/jeep-wrangler-front.jpg",
+      "https://example.com/images/jeep-wrangler-side.jpg"
+    ],
+    "features": {
+      "enginePower": 285,
+      "seatingCapacity": 5,
+      "transmission": "MANUAL",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "1b2a3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6q",
+    "manufacture": "Mazda",
+    "model": "3",
+    "year": 2021,
+    "licensePlate": "V4W5X6Y7",
+    "pricePerDay": 2500,
+    "isAvailable": true,
+    "description": "A compact car with a premium feel, stylish design, and engaging driving dynamics.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/mazda-3-front.jpg",
+      "https://example.com/images/mazda-3-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 155,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "e5f4d3c2-b1a0-9e8d-7c6b-5a4d3c2b1a0f",
+    "manufacture": "Honda",
+    "model": "Accord",
+    "year": 2023,
+    "licensePlate": "Z8A9B1C2",
+    "pricePerDay": 2900,
+    "isAvailable": true,
+    "description": "A stylish and spacious mid-size sedan with a reputation for reliability and a comfortable ride.",
+    "mileage": 8000,
+    "imageUrls": [
+      "https://example.com/images/honda-accord-front.jpg",
+      "https://example.com/images/honda-accord-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 192,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "Hyundai",
+    "model": "Santa Fe",
+    "year": 2022,
+    "licensePlate": "D3E4F5G6",
+    "pricePerDay": 3100,
+    "isAvailable": true,
+    "description": "A spacious and modern mid-size SUV with a comfortable interior and a smooth ride.",
+    "mileage": 16000,
+    "imageUrls": [
+      "https://example.com/images/hyundai-santafe-exterior.jpg",
+      "https://example.com/images/hyundai-santafe-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 191,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Nissan",
+    "model": "Murano",
+    "year": 2021,
+    "licensePlate": "H7I8J9K1",
+    "pricePerDay": 3300,
+    "isAvailable": true,
+    "description": "A stylish mid-size crossover SUV with a luxurious interior and a focus on comfort.",
+    "mileage": 22000,
+    "imageUrls": [
+      "https://example.com/images/nissan-murano-front.jpg",
+      "https://example.com/images/nissan-murano-side.jpg"
+    ],
+    "features": {
+      "enginePower": 260,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "5a4b3c2d-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Volkswagen",
+    "model": "Passat",
+    "year": 2020,
+    "licensePlate": "L2M3N4O5",
+    "pricePerDay": 2600,
+    "isAvailable": true,
+    "description": "A roomy and comfortable mid-size sedan with a classic design and a spacious back seat.",
+    "mileage": 35000,
+    "imageUrls": [
+      "https://example.com/images/volkswagen-passat-front.jpg",
+      "https://example.com/images/volkswagen-passat-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 174,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "7b6c5d4e-3f2a-1b0c-9d8e-7f6a5b4c3d2e",
+    "manufacture": "Subaru",
+    "model": "Outback",
+    "year": 2023,
+    "licensePlate": "P6Q7R8S9",
+    "pricePerDay": 3400,
+    "isAvailable": true,
+    "description": "A versatile wagon/SUV crossover with standard all-wheel drive, spacious interior, and off-road capability.",
+    "mileage": 7000,
+    "imageUrls": [
+      "https://example.com/images/subaru-outback-exterior.jpg",
+      "https://example.com/images/subaru-outback-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 182,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Jeep",
+    "model": "Cherokee",
+    "year": 2022,
+    "licensePlate": "T1U2V3W4",
+    "pricePerDay": 3200,
+    "isAvailable": true,
+    "description": "A compact SUV that blends on-road comfort with the rugged capability of a Jeep.",
+    "mileage": 14000,
+    "imageUrls": [
+      "https://example.com/images/jeep-cherokee-front.jpg",
+      "https://example.com/images/jeep-cherokee-side.jpg"
+    ],
+    "features": {
+      "enginePower": 180,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Tesla",
+    "model": "Model S",
+    "year": 2023,
+    "licensePlate": "X5Y6Z7A8",
+    "pricePerDay": 7500,
+    "isAvailable": true,
+    "description": "A high-performance all-electric luxury sedan with incredible acceleration and a long driving range.",
+    "mileage": 5000,
+    "imageUrls": [
+      "https://example.com/images/tesla-models-front.jpg",
+      "https://example.com/images/tesla-models-interior.jpg"
+    ],
+    "features": {
+      "enginePower": null,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "ELECTRIC",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "e7d6c5b4-a3b2-1c0d-9e8f-7a6b5c4d3e2f",
+    "manufacture": "Ford",
+    "model": "Explorer",
+    "year": 2021,
+    "licensePlate": "B9C1D2E3",
+    "pricePerDay": 3500,
+    "isAvailable": true,
+    "description": "A spacious three-row SUV perfect for families, offering a powerful engine and a comfortable ride.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/ford-explorer-exterior.jpg",
+      "https://example.com/images/ford-explorer-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 300,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "Honda",
+    "model": "Pilot",
+    "year": 2022,
+    "licensePlate": "F4G5H6J7",
+    "pricePerDay": 3400,
+    "isAvailable": true,
+    "description": "A mid-size SUV with a spacious and versatile cabin, perfect for families and long road trips.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/honda-pilot-front.jpg",
+      "https://example.com/images/honda-pilot-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 280,
+      "seatingCapacity": 8,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Hyundai",
+    "model": "Sonata",
+    "year": 2023,
+    "licensePlate": "K8L9M1N2",
+    "pricePerDay": 2800,
+    "isAvailable": true,
+    "description": "A mid-size sedan with a sleek, modern design and a comfortable, feature-rich interior.",
+    "mileage": 9000,
+    "imageUrls": [
+      "https://example.com/images/hyundai-sonata-exterior.jpg",
+      "https://example.com/images/hyundai-sonata-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 191,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "5a4b3c2d-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Kia",
+    "model": "K5",
+    "year": 2022,
+    "licensePlate": "O3P4Q5R6",
+    "pricePerDay": 2700,
+    "isAvailable": true,
+    "description": "A stylish and sporty mid-size sedan with a sleek design and a comfortable, driver-focused interior.",
+    "mileage": 12000,
+    "imageUrls": [
+      "https://example.com/images/kia-k5-front.jpg",
+      "https://example.com/images/kia-k5-side.jpg"
+    ],
+    "features": {
+      "enginePower": 180,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "7b6c5d4e-3f2a-1b0c-9d8e-7f6a5b4c3d2e",
+    "manufacture": "Mercedes-Benz",
+    "model": "S-Class",
+    "year": 2023,
+    "licensePlate": "S7T8U9V1",
+    "pricePerDay": 9000,
+    "isAvailable": true,
+    "description": "The pinnacle of luxury sedans, offering unmatched comfort, cutting-edge technology, and a powerful engine.",
+    "mileage": 3000,
+    "imageUrls": [
+      "https://example.com/images/mercedes-sclass-exterior.jpg",
+      "https://example.com/images/mercedes-sclass-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 429,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "LUXURY"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Toyota",
+    "model": "Tacoma",
+    "year": 2022,
+    "licensePlate": "W2X3Y4Z5",
+    "pricePerDay": 3800,
+    "isAvailable": true,
+    "description": "A reliable and capable mid-size pickup truck with a reputation for durability and off-road performance.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/toyota-tacoma-front.jpg",
+      "https://example.com/images/toyota-tacoma-side.jpg"
+    ],
+    "features": {
+      "enginePower": 278,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "TRUCK"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Subaru",
+    "model": "Crosstrek",
+    "year": 2021,
+    "licensePlate": "A6B7C8D9",
+    "pricePerDay": 2700,
+    "isAvailable": true,
+    "description": "A compact crossover with standard all-wheel drive, a rugged look, and excellent fuel economy.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/subaru-crosstrek-exterior.jpg",
+      "https://example.com/images/subaru-crosstrek-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 152,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "e7d6c5b4-a3b2-1c0d-9e8f-7a6b5c4d3e2f",
+    "manufacture": "Chevrolet",
+    "model": "Silverado 1500",
+    "year": 2023,
+    "licensePlate": "E1F2G3H4",
+    "pricePerDay": 4200,
+    "isAvailable": true,
+    "description": "A full-size pickup truck with a powerful engine, a comfortable cabin, and a strong towing capacity.",
+    "mileage": 8000,
+    "imageUrls": [
+      "https://example.com/images/chevrolet-silverado-front.jpg",
+      "https://example.com/images/chevrolet-silverado-side.jpg"
+    ],
+    "features": {
+      "enginePower": 355,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "TRUCK"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "Mazda",
+    "model": "CX-9",
+    "year": 2022,
+    "licensePlate": "I5J6K7L8",
+    "pricePerDay": 3500,
+    "isAvailable": true,
+    "description": "A three-row SUV that offers a premium feel and an engaging driving experience.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/mazda-cx9-exterior.jpg",
+      "https://example.com/images/mazda-cx9-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 250,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Volkswagen",
+    "model": "Atlas",
+    "year": 2021,
+    "licensePlate": "M9N1O2P3",
+    "pricePerDay": 3800,
+    "isAvailable": true,
+    "description": "A spacious three-row SUV with a massive interior and a focus on practicality and comfort.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/volkswagen-atlas-front.jpg",
+      "https://example.com/images/volkswagen-atlas-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 235,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "5a4b3c2d-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Toyota",
+    "model": "Highlander",
+    "year": 2022,
+    "licensePlate": "Q4R5S6T7",
+    "pricePerDay": 3600,
+    "isAvailable": true,
+    "description": "A popular three-row mid-size SUV known for its reliability, comfortable ride, and spacious cabin.",
+    "mileage": 12000,
+    "imageUrls": [
+      "https://example.com/images/toyota-highlander-exterior.jpg",
+      "https://example.com/images/toyota-highlander-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 295,
+      "seatingCapacity": 8,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "7b6c5d4e-3f2a-1b0c-9d8e-7f6a5b4c3d2e",
+    "manufacture": "Honda",
+    "model": "Passport",
+    "year": 2021,
+    "licensePlate": "U8V9W1X2",
+    "pricePerDay": 3300,
+    "isAvailable": true,
+    "description": "A mid-size SUV with a rugged look, a spacious two-row interior, and capable off-road performance.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/honda-passport-front.jpg",
+      "https://example.com/images/honda-passport-side.jpg"
+    ],
+    "features": {
+      "enginePower": 280,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Nissan",
+    "model": "Sentra",
+    "year": 2022,
+    "licensePlate": "Y3Z4A5B6",
+    "pricePerDay": 2400,
+    "isAvailable": true,
+    "description": "A compact sedan with a stylish design, a comfortable interior, and good fuel efficiency.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/nissan-sentra-exterior.jpg",
+      "https://example.com/images/nissan-sentra-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 149,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Subaru",
+    "model": "Impreza",
+    "year": 2021,
+    "licensePlate": "C7D8E9F1",
+    "pricePerDay": 2300,
+    "isAvailable": true,
+    "description": "A practical and affordable compact car with standard all-wheel drive and a comfortable ride.",
+    "mileage": 22000,
+    "imageUrls": [
+      "https://example.com/images/subaru-impreza-front.jpg",
+      "https://example.com/images/subaru-impreza-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 152,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "e7d6c5b4-a3b2-1c0d-9e8f-7a6b5c4d3e2f",
+    "manufacture": "Jeep",
+    "model": "Renegade",
+    "year": 2020,
+    "licensePlate": "G2H3J4K5",
+    "pricePerDay": 2800,
+    "isAvailable": true,
+    "description": "A subcompact SUV with a unique, boxy design, and surprising off-road capability for its size.",
+    "mileage": 30000,
+    "imageUrls": [
+      "https://example.com/images/jeep-renegade-front.jpg",
+      "https://example.com/images/jeep-renegade-side.jpg"
+    ],
+    "features": {
+      "enginePower": 180,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "Mazda",
+    "model": "6",
+    "year": 2021,
+    "licensePlate": "L6M7N8O9",
+    "pricePerDay": 2900,
+    "isAvailable": true,
+    "description": "A mid-size sedan with a premium feel, stylish design, and a focus on driving enjoyment.",
+    "mileage": 18000,
+    "imageUrls": [
+      "https://example.com/images/mazda-6-front.jpg",
+      "https://example.com/images/mazda-6-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 187,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Kia",
+    "model": "Sportage",
+    "year": 2023,
+    "licensePlate": "P1Q2R3S4",
+    "pricePerDay": 3000,
+    "isAvailable": true,
+    "description": "A compact SUV with a distinctive design, a comfortable ride, and a spacious cabin.",
+    "mileage": 8000,
+    "imageUrls": [
+      "https://example.com/images/kia-sportage-exterior.jpg",
+      "https://example.com/images/kia-sportage-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 187,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "5a4b3c2d-1e0f-9d8c-7b6a-5f4e3d2c1b0a",
+    "manufacture": "Chevrolet",
+    "model": "Malibu",
+    "year": 2022,
+    "licensePlate": "T5U6V7W8",
+    "pricePerDay": 2600,
+    "isAvailable": true,
+    "description": "A comfortable and efficient mid-size sedan with a spacious back seat and modern technology.",
+    "mileage": 15000,
+    "imageUrls": [
+      "https://example.com/images/chevrolet-malibu-front.jpg",
+      "https://example.com/images/chevrolet-malibu-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 160,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SEDAN"
+    }
+  },
+  {
+    "id": "7b6c5d4e-3f2a-1b0c-9d8e-7f6a5b4c3d2e",
+    "manufacture": "Ford",
+    "model": "Edge",
+    "year": 2021,
+    "licensePlate": "X9Y1Z2A3",
+    "pricePerDay": 3400,
+    "isAvailable": true,
+    "description": "A stylish and comfortable mid-size SUV with a spacious cabin and a quiet, smooth ride.",
+    "mileage": 19000,
+    "imageUrls": [
+      "https://example.com/images/ford-edge-exterior.jpg",
+      "https://example.com/images/ford-edge-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 250,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+    "manufacture": "Toyota",
+    "model": "4Runner",
+    "year": 2022,
+    "licensePlate": "B4C5D6E7",
+    "pricePerDay": 3900,
+    "isAvailable": true,
+    "description": "A rugged and capable SUV with true off-road performance and a reputation for durability.",
+    "mileage": 10000,
+    "imageUrls": [
+      "https://example.com/images/toyota-4runner-front.jpg",
+      "https://example.com/images/toyota-4runner-side.jpg"
+    ],
+    "features": {
+      "enginePower": 270,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "a9b8c7d6-e5f4-3g2h-1i0j-9k8l7m6n5o4p",
+    "manufacture": "Nissan",
+    "model": "Pathfinder",
+    "year": 2023,
+    "licensePlate": "F8G9H1J2",
+    "pricePerDay": 3700,
+    "isAvailable": true,
+    "description": "A capable three-row SUV with a spacious and modern interior, perfect for family adventures.",
+    "mileage": 7000,
+    "imageUrls": [
+      "https://example.com/images/nissan-pathfinder-exterior.jpg",
+      "https://example.com/images/nissan-pathfinder-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 284,
+      "seatingCapacity": 7,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "e7d6c5b4-a3b2-1c0d-9e8f-7a6b5c4d3e2f",
+    "manufacture": "Hyundai",
+    "model": "Palisade",
+    "year": 2022,
+    "licensePlate": "K3L4M5N6",
+    "pricePerDay": 3900,
+    "isAvailable": true,
+    "description": "A large and luxurious three-row SUV with a high-end interior, advanced technology, and a smooth ride.",
+    "mileage": 11000,
+    "imageUrls": [
+      "https://example.com/images/hyundai-palisade-front.jpg",
+      "https://example.com/images/hyundai-palisade-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 291,
+      "seatingCapacity": 8,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "SUV"
+    }
+  },
+  {
+    "id": "9f8e7d6c-5b4a-3e2d-1c0b-9a8d7e6c5b4a",
+    "manufacture": "Kia",
+    "model": "Carnival",
+    "year": 2021,
+    "licensePlate": "O7P8Q9R1",
+    "pricePerDay": 3500,
+    "isAvailable": true,
+    "description": "A 'Multi-Purpose Vehicle' with the styling of an SUV and the practicality of a minivan.",
+    "mileage": 20000,
+    "imageUrls": [
+      "https://example.com/images/kia-carnival-exterior.jpg",
+      "https://example.com/images/kia-carnival-interior.jpg"
+    ],
+    "features": {
+      "enginePower": 290,
+      "seatingCapacity": 8,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "MINIVAN"
+    }
+  },
+  {
+    "id": "2d1c0b9a-8e7f-6d5c-4b3a-2c1b0d9e8f7g",
+    "manufacture": "Jeep",
+    "model": "Gladiator",
+    "year": 2022,
+    "licensePlate": "S2T3U4V5",
+    "pricePerDay": 4500,
+    "isAvailable": true,
+    "description": "A mid-size pickup truck with the off-road capability of a Wrangler and the utility of a truck bed.",
+    "mileage": 10000,
+    "imageUrls": [
+      "https://example.com/images/jeep-gladiator-front.jpg",
+      "https://example.com/images/jeep-gladiator-side.jpg"
+    ],
+    "features": {
+      "enginePower": 285,
+      "seatingCapacity": 5,
+      "transmission": "AUTOMATIC",
+      "fuelType": "GASOLINE",
+      "carType": "TRUCK"
+    }
+  }
+]

@@ -9,14 +9,22 @@ import {
 } from "../ui/card";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
+import { Car } from "@/app/generated/prisma";
+import prisma from "@/prisma";
 
-//todo: give this component the car object as a Prop
-function CarCard() {
+interface Props {
+  car: Car;
+}
+
+async function CarCard({ car }: Props) {
+  const features = await prisma.features.findMany();
+  const carFeature = features.find((feat) => feat.id === car.featuresId);
+
   return (
     <Card className="max-w-[300px] md:max-w-[320px] lg:max-w-[350px] pt-0 overflow-hidden relative mb-5">
       <div className="absolute top-3 left-3 space-x-3">
         <Badge variant={"destructive"}>New</Badge>
-        <Badge className="font-semibold">Rented</Badge>
+        {car.isAvailable && <Badge className="font-semibold">Available</Badge>}
       </div>
 
       <Image
@@ -28,33 +36,40 @@ function CarCard() {
       />
       <CardHeader>
         <CardTitle className="text-2xl font-extrabold">
-          Toyota Rav4 Hybrid
+          <div>
+            <span className="pr-4">{car.manufacture}</span>
+            <span>{car.model}</span>
+          </div>
         </CardTitle>
-        <CardTitle className="text-xl">Luxury Metallic</CardTitle>
+        <CardTitle className="text-lg opacity-80">
+          {carFeature?.carType}
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="space-y-2">
         <div className="flex justify-between">
           <CardAction className="opacity-70">Year</CardAction>
-          <CardAction>2018</CardAction>
+          <CardAction>{car.year}</CardAction>
         </div>
         <div className="flex justify-between">
           <CardAction className="opacity-70">Engine Type</CardAction>
-          <CardAction>Hybrid</CardAction>
+          <CardAction>{carFeature?.fuelType}</CardAction>
         </div>
         <div className="flex justify-between">
           <CardAction className="opacity-70">Transmission</CardAction>
-          <CardAction>Automatic</CardAction>
+          <CardAction>{carFeature?.transmission}</CardAction>
         </div>
         <div className="flex justify-between">
           <CardAction className="opacity-70">Engine Power</CardAction>
-          <CardAction>127 HP</CardAction>
+          <CardAction>{carFeature?.enginePower} HP</CardAction>
         </div>
       </CardContent>
 
       <CardFooter className="flex justify-between">
         <CardAction className="opacity-70">Price from</CardAction>
-        <CardAction className="text-xl font-extrabold">890 $/day</CardAction>
+        <CardAction className="text-xl font-extrabold">
+          {car.pricePerDay} Birr / day
+        </CardAction>
       </CardFooter>
     </Card>
   );

@@ -79,3 +79,36 @@ model Verification {
 
   @@map("verification")
 }
+
+model Car {
+  id           String   @id @default(uuid())
+  manufacture  String
+  model        String
+  year         Int
+  licensePlate String   @unique
+  pricePerDay  Float
+  isAvailable  Boolean  @default(true)
+  description  String?
+  mileage      Int
+  imageUrls    String[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relationships
+  features   Features @relation(fields: [featuresId], references: [id])
+  featuresId String   @unique
+}
+
+// The Features model now holds all static car specifications.
+model Features {
+  id              String   @id @default(uuid())
+  enginePower     Int?
+  seatingCapacity Int
+  transmission    String
+  fuelType        String
+  carType         String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  car Car?
+}

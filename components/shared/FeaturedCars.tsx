@@ -12,7 +12,7 @@ function FeaturedCars() {
   return (
     <div className="my-8 w-full flex justify-center">
       <Carousel
-        className="max-w-5/6"
+        className="max-w-11/12"
         opts={{
           align: "start",
           loop: true,

@@ -1,11 +1,14 @@
 import CarCard from "@/components/shared/CarCard";
 import { H1 } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
+import prisma from "@/prisma";
 import { X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-function vehiclesPage() {
+async function vehiclesPage() {
+  const cars = await prisma.car.findMany();
+
   return (
     <div className="min-h-screen">
       <H1 className="mt-32 pb-10">Our Fleets</H1>
@@ -23,24 +26,20 @@ function vehiclesPage() {
 
         <div className="col-span-4 px-2 md:px-4">
           <div className="py-5 flex justify-between">
-            <span>115 Results</span>
+            <span>{cars.length} Results</span>
             <div>sort by: put a clickable filter here</div>
           </div>
 
           <div className="flex flex-wrap justify-between">
-            <Link
-              href={"/"}
-              className="hover:scale-102 transition-all duration-300"
-            >
-              <CarCard />
-            </Link>
-
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
+            {cars.map((car) => (
+              <Link
+                key={car.id}
+                href={`/vehicles/${car.id}`}
+                className="hover:scale-103 transition-all duration-200"
+              >
+                <CarCard car={car} />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
