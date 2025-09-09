@@ -7,7 +7,11 @@ import Link from "next/link";
 import React from "react";
 
 async function vehiclesPage() {
-  const cars = await prisma.car.findMany();
+  const cars = await prisma.car.findMany({
+    include: {
+      features: true,
+    },
+  });
 
   return (
     <div className="min-h-screen">
@@ -37,7 +41,7 @@ async function vehiclesPage() {
                 href={`/vehicles/${car.id}`}
                 className="hover:scale-103 transition-all duration-200"
               >
-                <CarCard car={car} />
+                <CarCard car={car} key={car.id} feature={car.features} />
               </Link>
             ))}
           </div>
