@@ -46,7 +46,6 @@ async function NavBar() {
           <div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                {/* <div className="flex gap-4 items-center px-3 py-1 outline-1 outline-muted rounded-sm cursor-pointer hover:bg-muted"> */}
                 <Button variant="outline" className="px-3 h-10 rounded-full">
                   <Avatar>
                     <AvatarImage src={user?.image ? user?.image : undefined} />
@@ -54,12 +53,10 @@ async function NavBar() {
                       <UserCircle2 className="size-3/4" />
                     </AvatarFallback>
                   </Avatar>
-
                   <div className="flex flex-col">
                     <span>{user?.name}</span>
                   </div>
                 </Button>
-                {/* </div> */}
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuLabel>Account</DropdownMenuLabel>
@@ -75,14 +72,12 @@ async function NavBar() {
                   <ShieldIcon />
                   {user?.role}
                 </DropdownMenuItem>
-
                 <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
                 <DropdownMenuSeparator className="mb-2" />
                 <div className="px-2 flex justify-between">
                   <Button variant={"outline"}>EN</Button>
                   <ModeToggle />
                 </div>
-
                 <span className="flex flex-col pt-4">
                   <SignOut />
                 </span>
