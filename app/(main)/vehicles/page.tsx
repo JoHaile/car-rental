@@ -1,10 +1,12 @@
 import CarCard from "@/components/shared/CarCard";
 import { H1 } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import prisma from "@/prisma";
 import { X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import CarFilters from "./filter/CarFilters";
 
 async function vehiclesPage() {
   const cars = await prisma.car.findMany({
@@ -25,7 +27,10 @@ async function vehiclesPage() {
               Clear All <X />
             </Button>
           </div>
-          <div className="bg-emerald-500">Put all filters here.</div>
+          <div className="space-y-4">
+            <p>Status</p>
+            <CarFilters />
+          </div>
         </div>
 
         <div className="col-span-4 px-2 md:px-4">

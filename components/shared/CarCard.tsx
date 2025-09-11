@@ -21,7 +21,9 @@ async function CarCard({ car, feature }: Props) {
     <Card className="max-w-[300px] md:max-w-[320px] lg:max-w-[350px] pt-0 overflow-hidden relative mb-[70px]">
       <div className="absolute top-3 left-3 space-x-3">
         <Badge variant={"destructive"}>New</Badge>
-        {car?.isAvailable && <Badge className="font-semibold">Available</Badge>}
+        {car?.isAvailable !== true && (
+          <Badge className="font-semibold">Coming Soon</Badge>
+        )}
       </div>
 
       <div className="h-[200px] w-full">
