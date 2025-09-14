@@ -23,7 +23,7 @@ async function NavBar() {
     <header className="h-16 flex items-center justify-between px-3 md:px-8 py-2">
       <div>Brand</div>
 
-      <ul className="flex gap-8">
+      <ul className="sm:flex gap-3 md:gap-8 hidden">
         {pageLinks.map((page) => (
           <Link
             key={page.href}

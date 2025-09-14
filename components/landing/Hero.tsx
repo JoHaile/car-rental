@@ -40,10 +40,6 @@ function Hero() {
           </Button>
         </div>
       </div>
-      <div className="absolute bottom-30 w-5/6 md:w-3/4 py-10 md:py-15 bg-muted flex gap-4 justify-center">
-        <DatePicker />
-        <DatePicker />
-      </div>
     </div>
   );
 }

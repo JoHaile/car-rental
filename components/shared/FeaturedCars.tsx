@@ -27,9 +27,9 @@ async function FeaturedCars() {
           loop: true,
         }}
       >
-        <CarouselContent>
+        <CarouselContent className="flex justify-center">
           {cars.map((car) => (
-            <CarouselItem className="basis-1/4" key={car.id}>
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3 " key={car.id}>
               <CarCard car={car} feature={car.features} />
             </CarouselItem>
           ))}

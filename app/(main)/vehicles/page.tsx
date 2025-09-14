@@ -8,76 +8,13 @@ import React from "react";
 import ManufactureFilter from "./filters/ManufactureFilter";
 import EngineTypeFilter from "./filters/EngineTypeFilter";
 import CarTypeFilter from "./filters/CarTypeFilter";
+import { carActions } from "@/server/carActions";
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
 async function vehiclesPage(props: { searchParams: SearchParams }) {
   const searchParams = await props.searchParams;
-  // Use a temporary variable to handle the mixed type of manufacturers
-  let selectedManufacturers = searchParams.manufacturers;
-
-  if (typeof selectedManufacturers === "string") {
-    selectedManufacturers = [selectedManufacturers];
-  } else if (!selectedManufacturers) {
-    selectedManufacturers = [];
-  }
-
-  let selectedCarTypes = searchParams.carType;
-
-  if (typeof selectedCarTypes === "string") {
-    selectedCarTypes = [selectedCarTypes];
-  } else if (!selectedCarTypes) {
-    selectedCarTypes = [];
-  }
-
-  const selectedEngineType = searchParams.engineType;
-
-  // Dynamically build the where clause based on active filters
-  const whereClause: any = {};
-
-  if (selectedManufacturers.length > 0) {
-    whereClause.manufacture = {
-      in: selectedManufacturers,
-    };
-  }
-
-  // This block handles filters on the features table
-  //! remember in database "engineType" is called "fuelType"
-  if (selectedEngineType || selectedCarTypes.length > 0) {
-    whereClause.features = {};
-
-    if (selectedEngineType) {
-      whereClause.features.fuelType = selectedEngineType;
-    }
-
-    if (selectedCarTypes.length > 0) {
-      whereClause.features.carType = {
-        in: selectedCarTypes,
-      };
-    }
-  }
-
-  // Use the single, dynamically built whereClause in the query
-  const cars = await prisma.car.findMany({
-    where: whereClause,
-    include: {
-      features: true,
-    },
-  });
-
-  const allManufactures = await prisma.car.findMany({
-    select: {
-      manufacture: true,
-    },
-    distinct: ["manufacture"],
-  });
-
-  const allCarTypes = await prisma.features.findMany({
-    select: {
-      carType: true,
-    },
-    distinct: ["carType"],
-  });
+  const { cars, allCarTypes, allManufactures } = await carActions(searchParams);
 
   return (
     <>
@@ -116,7 +53,9 @@ async function vehiclesPage(props: { searchParams: SearchParams }) {
 
             <div className="flex flex-wrap justify-between">
               {cars.length === 0 && (
-                <H3>there are no results found try another filter.</H3>
+                <p className="text-center">
+                  There are no results found . 😢 Try another filter.
+                </p>
               )}
               {cars.map((car) => (
                 <Link
