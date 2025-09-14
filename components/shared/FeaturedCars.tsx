@@ -10,6 +10,7 @@ import CarCard from "./CarCard";
 import prisma from "@/prisma";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { H2 } from "../Typography";
 
 async function FeaturedCars() {
   const cars = await prisma.car.findMany({
@@ -21,6 +22,7 @@ async function FeaturedCars() {
 
   return (
     <div className="my-8 w-full flex flex-col items-center justify-center mt-[200px]">
+      <H2 className="mb-16">Featured Cars</H2>
       <Carousel
         className="w-full max-w-11/12"
         opts={{

@@ -22,12 +22,12 @@ async function CarType() {
   });
 
   return (
-    <div className="mt-[200px] mb-[50px]">
+    <div className="mt-[200px] mb-[50px]  bg-muted py-10">
       <p className="pl-4">
         <span className="text-3xl font-bold">Brand Name.</span>
       </p>
 
-      <div className="flex gap-5 justify-center px-6 w-full my-16">
+      <div className="flex gap-5 justify-center px-6 w-full my-10">
         <Carousel
           className="w-full max-w-11/12"
           opts={{
