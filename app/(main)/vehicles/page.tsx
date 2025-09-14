@@ -20,7 +20,6 @@ async function vehiclesPage(props: { searchParams: SearchParams }) {
     <>
       <div className="min-h-screen">
         <H1 className="mt-32 pb-10">Our Fleets</H1>
-        {}
         <div className="grid grid-cols-5 gap-x-4">
           <div className="col-span-1 ">
             <div className="flex justify-between py-5">
@@ -38,10 +37,10 @@ async function vehiclesPage(props: { searchParams: SearchParams }) {
             <div className="space-y-4">
               <p>Engine Type</p>
               <EngineTypeFilter />
-              <p>Manufactures</p>
-              <ManufactureFilter allManufactures={allManufactures} />
               <p>Car Type</p>
               <CarTypeFilter allCarTypes={allCarTypes} />
+              <p>Manufactures</p>
+              <ManufactureFilter allManufactures={allManufactures} />
             </div>
           </div>
 

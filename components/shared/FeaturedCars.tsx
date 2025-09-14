@@ -18,18 +18,18 @@ async function FeaturedCars() {
       features: true,
     },
   });
+
   return (
     <div className="my-8 w-full flex flex-col items-center justify-center mt-[200px]">
       <Carousel
-        className="max-w-11/12"
+        className="w-full max-w-11/12"
         opts={{
           align: "start",
-          loop: true,
         }}
       >
-        <CarouselContent className="flex justify-center">
+        <CarouselContent>
           {cars.map((car) => (
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3 " key={car.id}>
+            <CarouselItem className="sm:basis-1/2 lg:basis-1/3 " key={car.id}>
               <CarCard car={car} feature={car.features} />
             </CarouselItem>
           ))}
