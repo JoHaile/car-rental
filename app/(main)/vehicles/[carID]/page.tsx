@@ -8,6 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { auth } from "@/lib/auth/auth";
+import getServerSession from "@/lib/auth/get-server-session";
 import prisma from "@/prisma";
 import Image from "next/image";
 import React from "react";
@@ -25,6 +27,7 @@ async function page({ params }: Params) {
       features: true,
     },
   });
+  const user = await getServerSession();
 
   return (
     <div>
@@ -59,11 +62,15 @@ async function page({ params }: Params) {
         </div>
 
         <div className="flex w-5/6 col-span-3 md:w-full md:col-span-1 ">
-          <CarDetailsCard car={car!} feature={car?.features!} />
+          <CarDetailsCard car={car} feature={car?.features} />
         </div>
       </div>
 
-      <Booking pricePerDay={car?.pricePerDay!} />
+      <Booking
+        pricePerDay={car?.pricePerDay}
+        carId={car?.id}
+        user={user?.user}
+      />
 
       <div id="additional" className="min-h-screen bg-emerald-800 mt-[80px]">
         <H1>Additional Information</H1>

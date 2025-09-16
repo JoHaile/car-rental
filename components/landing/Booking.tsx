@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useActionState, useEffect, useState } from "react";
+import React, { use, useActionState, useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { H1 } from "../Typography";
@@ -9,8 +9,15 @@ import { toast } from "sonner";
 import { router } from "better-auth/api";
 import { useRouter } from "next/navigation";
 import { date } from "zod";
+import { User } from "@/lib/auth/auth";
 
-function Booking({ pricePerDay }: { pricePerDay: number }) {
+interface Props {
+  pricePerDay: number | undefined;
+  carId: string | undefined;
+  user: User | undefined;
+}
+
+function Booking({ pricePerDay, carId, user }: Props) {
   const [day, setDay] = useState("");
   const [state, formAction, isLoading] = useActionState(
     bookingAction,
@@ -20,7 +27,7 @@ function Booking({ pricePerDay }: { pricePerDay: number }) {
 
   useEffect(() => {
     state?.success && toast.success(state.success);
-    state?.success && router.push("/confirmation");
+    state?.success && router.push("/confirmation/" + state.id);
 
     state?.error && toast.error(state.error);
     state?.error && setDay("");
@@ -40,6 +47,8 @@ function Booking({ pricePerDay }: { pricePerDay: number }) {
         action={formAction}
         className="max-w-3xl m-auto flex flex-col items-center"
       >
+        <input hidden type="text" name="carId" defaultValue={carId} />
+        <input hidden type="text" name="userId" defaultValue={user?.id} />
         <div className="flex flex-col gap-3 mt-[70px] w-full md:w-1/2 px-5 md:px-0 text-start">
           <label htmlFor="fullname">Full Name</label>
           <Input
@@ -47,7 +56,7 @@ function Booking({ pricePerDay }: { pricePerDay: number }) {
             type="text"
             id="fullname"
             name="name"
-            defaultValue={state?.fullName}
+            defaultValue={user?.name || state?.fullName}
             required
           />
           <label htmlFor="email" className="mt-5">
@@ -58,7 +67,7 @@ function Booking({ pricePerDay }: { pricePerDay: number }) {
             type="email"
             id="email"
             name="email"
-            defaultValue={state?.email}
+            defaultValue={user?.email || state?.email}
             required
           />
           <label htmlFor="date" className="mt-5">
@@ -115,7 +124,8 @@ function Booking({ pricePerDay }: { pricePerDay: number }) {
         </div>
 
         <div className="mt-8">
-          Total Price : {day ? parseInt(day) * pricePerDay + "Birr" : "0 Birr"}
+          Total Price :{" "}
+          {day ? parseInt(day) * (pricePerDay || 0) + "Birr" : "0 Birr"}
         </div>
 
         <Button className="mt-10" type="submit" disabled={isLoading}>

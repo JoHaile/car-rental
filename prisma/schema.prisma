@@ -30,6 +30,7 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
+  bookings      Booking[]
 
   @@unique([email])
   @@map("user")
@@ -97,6 +98,8 @@ model Car {
   // Relationships
   features   Features @relation(fields: [featuresId], references: [id])
   featuresId String   @unique
+
+  bookings Booking[]
 }
 
 // The Features model now holds all static car specifications.
@@ -111,4 +114,25 @@ model Features {
   updatedAt       DateTime @updatedAt
 
   car Car?
+}
+
+model Booking {
+  id           String   @id @default(uuid())
+  fullName     String
+  email        String
+  startingDate String
+  status       String   @default("Pending")
+  days         Int
+  totalPrice   Float
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relationships
+  carId String
+  car   Car    @relation(fields: [carId], references: [id], onDelete: Cascade)
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("booking")
 }

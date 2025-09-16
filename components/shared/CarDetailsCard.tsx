@@ -13,8 +13,8 @@ import Link from "next/link";
 import { Badge } from "../ui/badge";
 
 interface Props {
-  car: Car;
-  feature: Features;
+  car: Car | null;
+  feature: Features | undefined;
 }
 
 function CarDetailsCard({ car, feature }: Props) {
