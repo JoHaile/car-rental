@@ -1,3 +1,6 @@
+import Booking from "@/components/landing/Booking";
+import CarDetailsCard from "@/components/shared/CarDetailsCard";
+import { H1 } from "@/components/Typography";
 import {
   Carousel,
   CarouselContent,
@@ -24,37 +27,47 @@ async function page({ params }: Params) {
   });
 
   return (
-    <div className="my-8 w-full grid grid-cols-3 8 md:gap-0 justify-items-center">
-      <div className="col-span-3 md:col-span-2 text-center justify-items-center">
-        <Carousel
-          className="max-w-3/4 lg:max-w-5/6"
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-        >
-          <CarouselContent>
-            {car?.imageUrls.map((img) => (
-              <CarouselItem key={img}>
-                {
-                  <Image
-                    src={img ? img : "/car-image.jpg"}
-                    className="object-cover aspect-[16/9]"
-                    alt="image of a car"
-                    width={1000}
-                    height={1000}
-                  />
-                }
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+    <div>
+      <div className="my-8 w-full grid grid-cols-3 justify-items-center">
+        <div className="col-span-3 md:col-span-2 text-center justify-items-center my-auto">
+          <Carousel
+            className="max-w-3/4 lg:max-w-5/6"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {car?.imageUrls.map((img) => (
+                <CarouselItem key={img}>
+                  {
+                    <Image
+                      src={img ? img : "/car-image.jpg"}
+                      className="object-cover aspect-[16/9]"
+                      alt="image of a car"
+                      width={1000}
+                      height={1000}
+                    />
+                  }
+                </CarouselItem>
+              ))}
+            </CarouselContent>
 
-          <CarouselNext />
-          <CarouselPrevious />
-        </Carousel>
+            <CarouselNext />
+            <CarouselPrevious />
+          </Carousel>
+        </div>
+
+        <div className="flex w-5/6 col-span-3 md:w-full md:col-span-1 ">
+          <CarDetailsCard car={car!} feature={car?.features!} />
+        </div>
       </div>
 
-      <div className="">{car?.description}</div>
+      <Booking pricePerDay={car?.pricePerDay!} />
+
+      <div id="additional" className="min-h-screen bg-emerald-800 mt-[80px]">
+        <H1>Additional Information</H1>
+      </div>
     </div>
   );
 }
