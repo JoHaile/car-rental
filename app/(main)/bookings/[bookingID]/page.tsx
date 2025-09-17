@@ -22,6 +22,14 @@ async function Page({ params }: Params) {
     where: { id: bookingID },
     include: { car: true, user: true },
   });
+  const car = await prisma.car.findFirst({
+    where: {
+      id: booking?.carId,
+    },
+    include: {
+      features: true,
+    },
+  });
 
   if (!booking) {
     return (
@@ -42,105 +50,103 @@ async function Page({ params }: Params) {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted px-4 py-12">
-      <Card className="w-full max-w-2xl shadow-2xl border-0 bg-white/90 dark:bg-zinc-900/90 animate-in fade-in zoom-in-50">
+      <Card className="w-full max-w-3xl shadow-2xl border-0 bg-white/90 dark:bg-zinc-900/90 animate-in fade-in zoom-in-50">
         <CardHeader className="flex flex-col items-center gap-2">
-          <CardTitle className="text-2xl md:text-3xl font-extrabold text-center mb-2">
-            Booking Details
+          <CardTitle className="text-3xl font-extrabold text-center mb-2 text-green-600 dark:text-green-400">
+            Booking Confirmation
           </CardTitle>
           <CardDescription className="text-center text-base">
-            Here are the details for your booking.
+            Your booking is confirmed! Here are all the details.
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-8">
           {/* Booking Info */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-between">
-            <div className="flex flex-col gap-2 items-center md:items-start">
-              <Badge
-                variant="outline"
-                className="mb-1 text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700"
-              >
-                Booking ID
-              </Badge>
-              <span className="font-mono font-semibold text-lg tracking-wider select-all">
-                {booking.id}
-              </span>
-              <div className="flex items-center gap-2 mt-2">
-                <Calendar className="size-4 text-muted-foreground" />
-                <span className="text-sm">
-                  {new Date(booking.startingDate).toLocaleDateString()}
+          <div className="section border-b-2 border-muted pb-6 mb-6">
+            <div className="info-card bg-muted rounded-lg p-4 mb-4">
+              <h3 className="font-bold text-lg mb-2 text-primary">
+                Booking Information
+              </h3>
+              <p>
+                <span className="font-semibold pr-4">Booking ID:</span>{" "}
+                <span className="font-mono select-all">{booking.id}</span>
+              </p>
+              <p>
+                <span className="font-semibold pr-4">Status:</span>{" "}
+                <Badge variant={"destructive"}>{booking.status}</Badge>
+              </p>
+              <p>
+                <span className="font-semibold pr-4">Start Date:</span>{" "}
+                {new Date(booking.startingDate).toLocaleDateString()}
+              </p>
+              <p>
+                <span className="font-semibold pr-4">Duration:</span>{" "}
+                {booking.days} days
+              </p>
+              <p>
+                <span className="font-semibold pr-4">Total Price:</span>{" "}
+                <span className="text-green-700 dark:text-green-300 font-bold">
+                  {booking.days * booking.car?.pricePerDay} Birr
                 </span>
-                <Badge className="ml-2" variant="secondary">
-                  {booking.days} days
-                </Badge>
-              </div>
-              <Badge
-                className={`mt-2 ${
-                  booking.status === "CONFIRMED"
-                    ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"
-                    : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300"
-                }`}
-              >
-                {booking.status}
-              </Badge>
-            </div>
-
-            {/* Car Info */}
-            <div className="flex flex-col items-center md:items-start gap-2">
-              <Badge
-                variant="outline"
-                className="mb-1 text-xs px-3 py-1 bg-zinc-100 dark:bg-zinc-800/30 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-700"
-              >
-                Car Booked
-              </Badge>
-              <div className="flex items-center gap-2">
-                <Car className="size-5 text-primary" />
-                <span className="font-semibold text-lg capitalize">
-                  {booking.car?.manufacture} {booking.car?.model}
-                </span>
-              </div>
-              <span className="text-sm text-muted-foreground">
-                License: {booking.car?.licensePlate}
-              </span>
-              <span className="text-sm text-muted-foreground">
-                Price/Day: {booking.car?.pricePerDay} Birr
-              </span>
+              </p>
             </div>
           </div>
 
-          {/* User Info */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-between border-t pt-6">
-            <div className="flex flex-col items-center md:items-start gap-2">
-              <Badge
-                variant="outline"
-                className="mb-1 text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-700"
-              >
-                Booked By
-              </Badge>
-              <div className="flex items-center gap-2">
-                <Avatar className="size-8">
-                  <AvatarImage src={booking.user?.image || undefined} />
-                  <AvatarFallback>
-                    <User2 className="size-5" />
-                  </AvatarFallback>
-                </Avatar>
-                <span className="font-semibold text-base">
-                  {booking.user?.name}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="size-4" />
-                <span>{booking.user?.email}</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <KeyRound className="size-4" />
-                <span>User ID: {booking.user?.id}</span>
+          {/* Car Details */}
+          <div className="section border-b-2 border-muted pb-6 mb-6">
+            <h2 className="text-xl font-bold mb-4">Car Details</h2>
+            <div className="car-details flex flex-col md:flex-row gap-6 items-center">
+              <img
+                src={car?.imageUrls?.[0] || "/car-placeholder.png"}
+                alt="Car Image"
+                className="car-image w-full md:w-1/2 max-h-64 object-cover rounded-lg shadow"
+              />
+              <div className="car-info w-full md:w-1/2">
+                <p>
+                  <span className="font-semibold">Vehicle:</span>{" "}
+                  <span className="capitalize">
+                    {booking.car?.manufacture} {booking.car?.model} (
+                    {booking.car?.year})
+                  </span>
+                </p>
+                <p>
+                  <span className="font-semibold">License Plate:</span>{" "}
+                  {booking.car?.licensePlate}
+                </p>
+                <div className="info-card bg-background border border-muted rounded-md p-3 mt-4">
+                  <h3 className="font-bold text-base mb-2">Features</h3>
+                  <p>
+                    <span className="font-semibold">Type:</span>{" "}
+                    {car?.features.carType || "-"}
+                  </p>
+                  <p>
+                    <span className="font-semibold">Transmission:</span>{" "}
+                    {car?.features.transmission || "-"}
+                  </p>
+                  <p>
+                    <span className="font-semibold">Seating Capacity:</span>{" "}
+                    {car?.features.seatingCapacity || "-"} seats
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-center md:items-end gap-2">
-              <span className="text-2xl font-bold text-primary">
-                {booking.days * booking.car?.pricePerDay} Birr
-              </span>
-              <span className="text-xs text-muted-foreground">Total Price</span>
+          </div>
+
+          {/* Renter Details */}
+          <div className="section">
+            <h2 className="text-xl font-bold mb-4">Renter Details</h2>
+            <div className="info-card bg-muted rounded-lg p-4">
+              <p>
+                <span className="font-semibold">Name:</span>{" "}
+                {booking.user?.name}
+              </p>
+              <p>
+                <span className="font-semibold">Email:</span>{" "}
+                {booking.user?.email}
+              </p>
+              <p>
+                <span className="font-semibold">Phone:</span>{" "}
+                {booking.user?.role || "-"}
+              </p>
             </div>
           </div>
 

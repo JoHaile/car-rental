@@ -31,7 +31,7 @@ export const bookingAction = async (prevState: unknown, formData: FormData) => {
         days: parseInt(days),
         totalPrice,
         carId,
-        userId,
+        userId: userId || undefined,
       },
     });
 

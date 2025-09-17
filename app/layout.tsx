@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head />
       <body className={`${geistSans.className}`}>
         <ThemeProvider
@@ -29,7 +29,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="max-w-[1500px] m-auto">{children}</main>
+          <main className="max-w-[1500px] m-auto bg-gradient-to-br from-background to-muted">
+            {children}
+          </main>
           <Toaster
             closeButton
             position="top-center"

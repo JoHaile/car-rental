@@ -9,8 +9,7 @@ function layout({ children }: Props) {
   return (
     <main>
       <NavBar />
-
-      {children}
+      <main className="">{children}</main>
 
       <Footer />
     </main>
