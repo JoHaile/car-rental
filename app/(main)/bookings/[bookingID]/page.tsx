@@ -62,29 +62,31 @@ async function Page({ params }: Params) {
         <CardContent className="flex flex-col gap-8">
           {/* Booking Info */}
           <div className="section border-b-2 border-muted pb-6 mb-6">
-            <div className="info-card bg-muted rounded-lg p-4 mb-4">
+            <div className="info-card flex flex-col gap-5 bg-muted rounded-lg p-4 mb-4">
               <h3 className="font-bold text-lg mb-2 text-primary">
                 Booking Information
               </h3>
-              <p>
+              <p className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Booking ID:</span>{" "}
                 <span className="font-mono select-all">{booking.id}</span>
               </p>
-              <p>
+              <p className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Status:</span>{" "}
                 <Badge variant={"destructive"}>{booking.status}</Badge>
               </p>
-              <p>
+              <p className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Start Date:</span>{" "}
                 {new Date(booking.startingDate).toLocaleDateString()}
               </p>
-              <p>
+              <p className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Duration:</span>{" "}
                 {booking.days} days
               </p>
-              <p>
-                <span className="font-semibold pr-4">Total Price:</span>{" "}
-                <span className="text-green-700 dark:text-green-300 font-bold">
+              <p className="flex justify-between px-4">
+                <span className="flex justify-between w-full font-semibold pr-4">
+                  Total Price:
+                </span>{" "}
+                <span className="text-green-700 dark:text-green-300 text-nowrap font-bold">
                   {booking.days * booking.car?.pricePerDay} Birr
                 </span>
               </p>
@@ -102,18 +104,18 @@ async function Page({ params }: Params) {
               />
               <div className="car-info w-full md:w-1/2">
                 <p>
-                  <span className="font-semibold">Vehicle:</span>{" "}
+                  <span className="font-semibold text-lg">Vehicle : </span>
                   <span className="capitalize">
-                    {booking.car?.manufacture} {booking.car?.model} (
-                    {booking.car?.year})
+                    {booking.car?.manufacture} {booking.car?.model}{" "}
+                    {booking.car?.year}
                   </span>
                 </p>
                 <p>
-                  <span className="font-semibold">License Plate:</span>{" "}
+                  <span className="font-semibold text-lg">License Plate:</span>{" "}
                   {booking.car?.licensePlate}
                 </p>
-                <div className="info-card bg-background border border-muted rounded-md p-3 mt-4">
-                  <h3 className="font-bold text-base mb-2">Features</h3>
+                <div className="info-card bg-background flex flex-col gap-4 border border-muted rounded-md p-3 mt-4">
+                  <h3 className="font-bold text-base mb-1">Features</h3>
                   <p>
                     <span className="font-semibold">Type:</span>{" "}
                     {car?.features.carType || "-"}
@@ -136,16 +138,11 @@ async function Page({ params }: Params) {
             <h2 className="text-xl font-bold mb-4">Renter Details</h2>
             <div className="info-card bg-muted rounded-lg p-4">
               <p>
-                <span className="font-semibold">Name:</span>{" "}
-                {booking.user?.name}
+                <span className="font-semibold">Full Name: </span>
+                {booking.fullName}
               </p>
               <p>
-                <span className="font-semibold">Email:</span>{" "}
-                {booking.user?.email}
-              </p>
-              <p>
-                <span className="font-semibold">Phone:</span>{" "}
-                {booking.user?.role || "-"}
+                <span className="font-semibold">Email:</span> {booking.email}
               </p>
             </div>
           </div>
