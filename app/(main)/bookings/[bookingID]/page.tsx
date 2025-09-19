@@ -11,6 +11,8 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Calendar, Car, User2, Mail, KeyRound, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import prisma from "@/prisma";
+import StatusChange from "../../reception/[bookingID]/StatusChange";
+import { Role } from "@/app/generated/prisma";
 
 interface Params {
   params: Promise<{ bookingID: string }>;
@@ -30,6 +32,8 @@ async function Page({ params }: Params) {
       features: true,
     },
   });
+
+  const customerRole = booking?.user?.role.includes(Role.Customer);
 
   if (!booking) {
     return (
@@ -70,10 +74,19 @@ async function Page({ params }: Params) {
                 <span className="font-semibold pr-4">Booking ID:</span>{" "}
                 <span className="font-mono select-all">{booking.id}</span>
               </p>
-              <p className="flex justify-between px-4">
+              <div className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Status:</span>{" "}
-                <Badge variant={"destructive"}>{booking.status}</Badge>
-              </p>
+                <div className="flex gap-4">
+                  {customerRole ? "" : <StatusChange bookingID={bookingID} />}
+                  <Badge
+                    variant={
+                      booking.status === "Canceled" ? "destructive" : "default"
+                    }
+                  >
+                    {booking.status}
+                  </Badge>
+                </div>
+              </div>
               <p className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Start Date:</span>{" "}
                 {new Date(booking.startingDate).toLocaleDateString()}

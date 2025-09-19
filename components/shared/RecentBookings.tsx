@@ -7,6 +7,11 @@ import { Badge } from "../ui/badge";
 
 async function RecentBookings() {
   const session = await getServerSession();
+
+  if (!session) {
+    return <div>Sign Up/In to see Recent Bookings.</div>;
+  }
+
   const user = await prisma.user.findUnique({
     where: {
       id: session?.user.id,
@@ -16,13 +21,11 @@ async function RecentBookings() {
     },
   });
 
-  if (!session) {
-    return <div>Sign Up/In to see Recent Bookings.</div>;
-  }
-
   return (
     <div className="flex flex-col gap-4 max-w-xl m-auto my-20 bg-accent rounded-lg p-5">
-      <Badge className="mb-4">Total Booking: {user?.bookings.length}</Badge>
+      <Badge className="mb-4 font-semibold">
+        Total Booking: {user?.bookings.length}
+      </Badge>
       {user?.bookings.map((book) => (
         <div key={book.id}>
           <p className="flex justify-between">
@@ -31,7 +34,11 @@ async function RecentBookings() {
           </p>
           <p className="flex justify-between">
             <span>Status: </span>
-            <Badge variant={"destructive"}>{book.status}</Badge>
+            <Badge
+              variant={book.status === "Canceled" ? "destructive" : "default"}
+            >
+              {book.status}
+            </Badge>
           </p>
         </div>
       ))}

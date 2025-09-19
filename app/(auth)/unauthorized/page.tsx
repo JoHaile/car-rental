@@ -9,11 +9,17 @@ function UnauthorizedPage() {
       <Card>
         <CardContent>
           <h1 className="text-2xl pb-10 px-5">
-            You are not Authorized to Visit This Page!
+            You are not Authorized to Visit This Page! Sign up/In to see this
+            Page.
           </h1>
           <Button className="w-full">
             <Link className="w-full" href="/">
               Back to Home
+            </Link>
+          </Button>
+          <Button className="w-full">
+            <Link className="w-full" href="/signup">
+              Sign Up/In
             </Link>
           </Button>
         </CardContent>
