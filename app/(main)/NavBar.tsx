@@ -11,13 +11,28 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import getServerSession from "@/lib/auth/get-server-session";
-import { ChevronDown, Mail, ShieldIcon, UserCircle2 } from "lucide-react";
+import {
+  ChevronDown,
+  LucideBookmark,
+  Mail,
+  ShieldIcon,
+  UserCircle2,
+} from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import prisma from "@/prisma";
 
 async function NavBar() {
   const session = await getServerSession();
-  const user = session?.user;
+  // const user = session?.user;
+  const user = await prisma.user.findFirst({
+    where: {
+      id: session?.user.id,
+    },
+    include: {
+      bookings: true,
+    },
+  });
 
   return (
     <header className="h-16 flex items-center justify-between px-3 md:px-8 py-2">
@@ -72,6 +87,12 @@ async function NavBar() {
                   <ShieldIcon />
                   {user?.role}
                 </DropdownMenuItem>
+                <Link href="/bookings">
+                  <DropdownMenuItem>
+                    <LucideBookmark />
+                    Total Bookings: {user?.bookings.length}
+                  </DropdownMenuItem>
+                </Link>
                 <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
                 <DropdownMenuSeparator className="mb-2" />
                 <div className="px-2 flex justify-between">
