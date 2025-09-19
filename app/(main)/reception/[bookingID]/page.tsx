@@ -53,7 +53,7 @@ async function page({ params }: Params) {
         <Card className="p-8 text-center">
           <CardTitle>Booking Not Found</CardTitle>
           <CardDescription>
-            We couldn't find a booking with ID{" "}
+            We couldn&apos;t find a booking with ID{" "}
             <span className="font-mono">{bookingID}</span>.
           </CardDescription>
           <Link href="/bookings">
