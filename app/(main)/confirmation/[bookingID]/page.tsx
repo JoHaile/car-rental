@@ -12,11 +12,11 @@ import Link from "next/link";
 import CopyButton from "./CopyButton";
 
 interface Params {
-  params: { bookingID: string };
+  params: Promise<{ bookingID: string }>;
 }
 
-export default function ConfirmationPage({ params }: Params) {
-  const { bookingID } = params;
+export default async function ConfirmationPage({ params }: Params) {
+  const { bookingID } = await params;
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted px-4 py-12">
