@@ -33,7 +33,7 @@ async function Page({ params }: Params) {
     },
   });
 
-  const customerRole = booking?.user?.role.includes(Role.Customer);
+  const adminRole = booking?.user?.role.includes(Role.Admin);
 
   if (!booking) {
     return (
@@ -77,7 +77,7 @@ async function Page({ params }: Params) {
               <div className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Status:</span>{" "}
                 <div className="flex gap-4">
-                  {customerRole ? "" : <StatusChange bookingID={bookingID} />}
+                  {adminRole && <StatusChange bookingID={bookingID} />}
                   <Badge
                     variant={
                       booking.status === "Canceled" ? "destructive" : "default"
