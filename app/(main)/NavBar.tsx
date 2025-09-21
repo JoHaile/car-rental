@@ -88,7 +88,7 @@ async function NavBar() {
 
       <div className="flex items-center gap-4">
         {session ? (
-          <UserDropdown user={user} />
+          <UserDropdown user={user} bookings={user?.bookings.length} />
         ) : (
           <div className="flex gap-4 items-center">
             {/* <Button variant={"outline"}>EN</Button> */}

@@ -16,10 +16,11 @@ import { ModeToggle } from "../theme/dark-mode";
 import { User } from "@/app/generated/prisma";
 
 interface Props {
-  user: any;
+  user: User | null | undefined;
+  bookings?: number;
 }
 
-function UserDropdown({ user }: Props) {
+function UserDropdown({ user, bookings }: Props) {
   return (
     <div>
       <DropdownMenu>
@@ -53,7 +54,7 @@ function UserDropdown({ user }: Props) {
           <Link href="/bookings">
             <DropdownMenuItem>
               <LucideBookmark />
-              Total Bookings: {user?.bookings.length}
+              Total Bookings: {bookings}
             </DropdownMenuItem>
           </Link>
           <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>

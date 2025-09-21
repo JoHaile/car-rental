@@ -79,7 +79,9 @@ function BookingSteps() {
 
       <div className="mt-[200px] w-full flex flex-col items-center">
         <span className="font-bold text-lg md:text-4xl">Pick Up Your Car</span>
-        <p className="mt-5">Go to Nearest Branch and Pick Your Car.</p>
+        <p className="mt-5">
+          Go to Nearest Branch and Pick Your Car With your Booking ID.
+        </p>
 
         <div className="relative w-3/4 md:w-1/2 h-[500px] md:h-[700px] m-auto ">
           <Image
