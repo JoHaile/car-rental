@@ -82,7 +82,7 @@ function Booking({ pricePerDay, carId, user }: Props) {
             required
           />
           <p className="mt-5">How Many Days Are You Rent For</p>
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap gap-3">
             <Button
               variant={"outline"}
               type="button"

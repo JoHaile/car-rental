@@ -24,7 +24,7 @@ async function FeaturedCars() {
     <div className="my-8 w-full flex flex-col items-center justify-center mt-[200px]">
       <H2 className="mb-16">Featured Cars</H2>
       <Carousel
-        className="w-full max-w-11/12"
+        className="w-[65%] md:max-w-11/12"
         opts={{
           align: "start",
         }}

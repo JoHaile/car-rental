@@ -35,6 +35,15 @@ export const bookingAction = async (prevState: unknown, formData: FormData) => {
       },
     });
 
+    const car = await prisma.car.update({
+      where: {
+        id: carId,
+      },
+      data: {
+        isAvailable: false,
+      },
+    });
+
     return {
       id: booking.id,
       success: "Your Booking is Successful.",

@@ -15,6 +15,7 @@ import {
   ChevronDown,
   LucideBookmark,
   Mail,
+  Menu,
   ShieldIcon,
   UserCircle2,
 } from "lucide-react";
@@ -36,7 +37,35 @@ async function NavBar() {
 
   return (
     <header className="h-16 flex items-center justify-between px-3 md:px-8 py-2">
-      <div>Brand</div>
+      {/* For small screens */}
+      <div className="sm:hidden">
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Menu />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <ul className="flex gap-3 flex-col p-4">
+              {pageLinks.map((page) => (
+                <Link
+                  key={page.href}
+                  href={page.href}
+                  className="hover:text-primary transition-all duration-150"
+                >
+                  {page.label === "Company" ? (
+                    <span className="flex gap-2 items-center">
+                      <span>{page.label}</span> <ChevronDown />
+                    </span>
+                  ) : (
+                    page.label
+                  )}
+                </Link>
+              ))}
+            </ul>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
+      <div>Gondar</div>
 
       <ul className="sm:flex gap-3 md:gap-8 hidden">
         {pageLinks.map((page) => (

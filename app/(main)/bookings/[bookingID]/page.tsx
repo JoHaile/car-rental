@@ -77,7 +77,6 @@ async function Page({ params }: Params) {
               <div className="flex justify-between px-4">
                 <span className="font-semibold pr-4">Status:</span>{" "}
                 <div className="flex gap-4">
-                  {adminRole && <StatusChange bookingID={bookingID} />}
                   <Badge
                     variant={
                       booking.status === "Canceled" ? "destructive" : "default"
@@ -111,7 +110,7 @@ async function Page({ params }: Params) {
             <h2 className="text-xl font-bold mb-4">Car Details</h2>
             <div className="car-details flex flex-col md:flex-row gap-6 items-center">
               <img
-                src={car?.imageUrls?.[0] || "/car-placeholder.png"}
+                src={car?.imageUrls?.[2] || "/car-placeholder.png"}
                 alt="Car Image"
                 className="car-image w-full md:w-1/2 max-h-64 object-cover rounded-lg shadow"
               />

@@ -19,6 +19,8 @@ interface Params {
 }
 async function page({ params }: Params) {
   const { carID } = await params;
+  const user = await getServerSession();
+
   const car = await prisma.car.findFirst({
     where: {
       id: carID,
@@ -27,14 +29,13 @@ async function page({ params }: Params) {
       features: true,
     },
   });
-  const user = await getServerSession();
 
   return (
     <div>
       <div className="my-8 w-full grid grid-cols-3 justify-items-center">
         <div className="col-span-3 md:col-span-2 text-center justify-items-center my-auto">
           <Carousel
-            className="max-w-3/4 lg:max-w-5/6"
+            className="max-w-[65%] mb-5 lg:max-w-5/6"
             opts={{
               align: "start",
               loop: true,
@@ -73,7 +74,7 @@ async function page({ params }: Params) {
       />
 
       <div id="additional" className="min-h-screen bg-emerald-800 mt-[80px]">
-        <H1>Additional Information</H1>
+        <H1 className="text-sm md:text-3xl">Additional Information</H1>
       </div>
     </div>
   );

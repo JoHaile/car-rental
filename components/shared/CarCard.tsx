@@ -22,7 +22,7 @@ async function CarCard({ car, feature }: Props) {
       <div className="absolute top-3 left-3 space-x-3">
         <Badge variant={"destructive"}>New</Badge>
         {car?.isAvailable !== true && (
-          <Badge className="font-semibold">Coming Soon</Badge>
+          <Badge className="font-semibold">Rented / Available</Badge>
         )}
       </div>
 
@@ -46,19 +46,19 @@ async function CarCard({ car, feature }: Props) {
       </CardHeader>
 
       <CardContent className="space-y-2">
-        <div className="flex justify-between">
+        <div className="flex justify-between text-xs sm:text-sm ">
           <CardAction className="opacity-70">Year</CardAction>
           <CardAction>{car?.year}</CardAction>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between text-xs sm:text-sm">
           <CardAction className="opacity-70">Engine Type</CardAction>
           <CardAction>{feature?.fuelType}</CardAction>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between text-xs sm:text-sm">
           <CardAction className="opacity-70">Transmission</CardAction>
           <CardAction>{feature?.transmission}</CardAction>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between text-xs sm:text-sm">
           <CardAction className="opacity-70">Engine Power</CardAction>
           <CardAction>{feature?.enginePower} HP</CardAction>
         </div>
