@@ -2,10 +2,11 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full bg-primary text-primary-foreground dark:bg-secondary dark:text-secondary-foreground py-8 px-4 mt-12">
+    <footer className="w-full bg-stone-300 dark:bg-accent py-8 px-4 mt-12 min-h-[350px]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
         {/* Brand and tagline */}
         <div className="flex flex-col items-center md:items-start gap-2">
@@ -33,9 +34,17 @@ function Footer() {
 
         {/* Call to action and copyright */}
         <div className="flex flex-col items-center md:items-end gap-2">
-          <Button variant="secondary" className="w-full md:w-auto">
-            Get Started
+          <Button variant={"ghost"} className="w-full md:w-auto">
+            <Link href={"/signup"} className="size-full">
+              Get Started
+            </Link>
           </Button>
+          <div className="flex gap-5 text-primary">
+            <Facebook />
+            <Twitter />
+            <Instagram />
+            <Youtube />
+          </div>
           <span className="text-xs opacity-70 mt-2">
             &copy; {new Date().getFullYear()} Brand. All rights reserved.
           </span>

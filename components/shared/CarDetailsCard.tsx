@@ -33,7 +33,7 @@ function CarDetailsCard({ car, feature }: Props) {
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="space-y-4 ">
+        <CardContent className="space-y-5 divide-y-2 ">
           <div className="flex justify-between">
             <CardAction className="opacity-70">Year</CardAction>
             <CardAction>{car?.year}</CardAction>

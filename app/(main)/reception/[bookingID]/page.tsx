@@ -77,6 +77,7 @@ async function page({ params }: Params) {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-8">
+            <StatusChange bookingID={bookingID} />
             {/* Booking Info */}
             <div className="section border-b-2 border-muted pb-6 mb-6">
               <div className="info-card flex flex-col gap-5 bg-muted rounded-lg p-4 mb-4">
@@ -90,7 +91,6 @@ async function page({ params }: Params) {
                 <div className="flex justify-between px-4">
                   <span className="font-semibold pr-4">Status:</span>{" "}
                   <div className="flex gap-4">
-                    <StatusChange bookingID={bookingID} />{" "}
                     <Badge
                       variant={
                         booking.status === "Canceled"
@@ -120,7 +120,6 @@ async function page({ params }: Params) {
                 </p>
               </div>
             </div>
-
             {/* Car Details */}
             <div className="section border-b-2 border-muted pb-6 mb-6">
               <h2 className="text-xl font-bold mb-4">Car Details</h2>
@@ -162,7 +161,6 @@ async function page({ params }: Params) {
                 </div>
               </div>
             </div>
-
             {/* Renter Details */}
             <div className="section">
               <h2 className="text-xl font-bold mb-4">Renter Details</h2>
@@ -176,7 +174,6 @@ async function page({ params }: Params) {
                 </p>
               </div>
             </div>
-
             <div className="flex justify-between mt-8">
               <Link href="/vehicles">
                 <Button variant="outline" className="flex items-center gap-2">

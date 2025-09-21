@@ -22,6 +22,7 @@ import {
 import Link from "next/link";
 import React from "react";
 import prisma from "@/prisma";
+import UserDropdown from "@/components/shared/UserDropdown";
 
 async function NavBar() {
   const session = await getServerSession();
@@ -87,56 +88,10 @@ async function NavBar() {
 
       <div className="flex items-center gap-4">
         {session ? (
-          <div>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="px-3 h-10 rounded-full">
-                  <Avatar>
-                    <AvatarImage src={user?.image ? user?.image : undefined} />
-                    <AvatarFallback>
-                      <UserCircle2 className="size-3/4" />
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <span>{user?.name}</span>
-                  </div>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuLabel>Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <UserCircle2 />
-                  {user?.name}
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Mail /> {user?.email}
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <ShieldIcon />
-                  {user?.role}
-                </DropdownMenuItem>
-                <Link href="/bookings">
-                  <DropdownMenuItem>
-                    <LucideBookmark />
-                    Total Bookings: {user?.bookings.length}
-                  </DropdownMenuItem>
-                </Link>
-                <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
-                <DropdownMenuSeparator className="mb-2" />
-                <div className="px-2 flex justify-between">
-                  <Button variant={"outline"}>EN</Button>
-                  <ModeToggle />
-                </div>
-                <span className="flex flex-col pt-4">
-                  <SignOut />
-                </span>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+          <UserDropdown user={user} />
         ) : (
           <div className="flex gap-4 items-center">
-            <Button variant={"outline"}>EN</Button>
+            {/* <Button variant={"outline"}>EN</Button> */}
             <ModeToggle />
             <Link href="/signup">
               <Button>Sign In/Up</Button>

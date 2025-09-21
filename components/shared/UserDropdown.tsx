@@ -1,0 +1,74 @@
+import React from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
+import { UserCircle2, Mail, ShieldIcon, LucideBookmark } from "lucide-react";
+import SignOut from "../auth/SignOut";
+import { ModeToggle } from "../theme/dark-mode";
+import { User } from "@/app/generated/prisma";
+
+interface Props {
+  user: any;
+}
+
+function UserDropdown({ user }: Props) {
+  return (
+    <div>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" className="px-3 h-10 rounded-full">
+            <Avatar>
+              <AvatarImage src={user?.image ? user?.image : undefined} />
+              <AvatarFallback>
+                <UserCircle2 className="size-3/4" />
+              </AvatarFallback>
+            </Avatar>
+            <div className="flex flex-col">
+              <span>{user?.name}</span>
+            </div>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>Account</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <UserCircle2 />
+            {user?.name}
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Mail /> {user?.email}
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <ShieldIcon />
+            {user?.role}
+          </DropdownMenuItem>
+          <Link href="/bookings">
+            <DropdownMenuItem>
+              <LucideBookmark />
+              Total Bookings: {user?.bookings.length}
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
+          <DropdownMenuSeparator className="mb-2" />
+          <div className="px-2 flex justify-between">
+            {/* <Button variant={"outline"}>EN</Button> */}
+            <ModeToggle />
+          </div>
+          <span className="flex flex-col pt-4">
+            <SignOut />
+          </span>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+  );
+}
+
+export default UserDropdown;
