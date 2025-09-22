@@ -10,7 +10,9 @@ function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
         {/* Brand and tagline */}
         <div className="flex flex-col items-center md:items-start gap-2">
-          <span className="text-2xl font-extrabold tracking-tight">Brand</span>
+          <span className="text-2xl font-extrabold tracking-tight">
+            Gondar Rentals.
+          </span>
           <span className="text-sm opacity-80">
             Drive your dreams, rent with ease.
           </span>

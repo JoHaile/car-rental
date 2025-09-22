@@ -24,8 +24,11 @@ function About() {
             Welcome to Gondar Rentals, where your adventure begins.
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mt-2">
-            Discover the freedom of the open road with our diverse fleet,
-            seamless booking, and customer-first service.
+            Gondar Car Rentals is a premier car rental service based in Gondar,
+            Ethiopia, offering a wide range of vehicles for both local and
+            international travelers. Our fleet includes economy cars, SUVs,
+            luxury vehicles, and electric cars, all maintained to the highest
+            standards of safety and comfort.
           </p>
         </section>
 
@@ -58,7 +61,7 @@ function About() {
             <Card className="shadow-sm">
               <CardContent className="py-8 flex flex-col items-center">
                 <h3 className="text-lg font-bold mb-2">
-                  Customer-Centric Service
+                  24/7 Customer Support
                 </h3>
                 <p className="text-center text-muted-foreground">
                   Our support team is here for you 24/7, ensuring a smooth and

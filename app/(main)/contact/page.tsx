@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import OurAddress from "@/components/landing/OurAddress";
 import { H1 } from "@/components/Typography";
 import ContactForm from "./ContactForm";
+import FAQPage from "../faqs/page";
+import FaqAccordion from "../faqs/FaqAccordion";
 
 export default function Contact() {
   return (
@@ -13,6 +15,16 @@ export default function Contact() {
           Visit us at our main office for any inquiries or support.
         </p>
         <OurAddress />
+      </div>
+
+      {/* FAQ Section */}
+      <div className="w-full max-w-4xl mx-auto my-32 px-4 text-center">
+        <H1>Frequently Asked Questions</H1>
+        <p>
+          These are the most common questions we receive. If you have any
+          questions, feel free to reach out to us.
+        </p>
+        <FaqAccordion />
       </div>
 
       <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-12">

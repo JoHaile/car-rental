@@ -1,0 +1,62 @@
+[
+  {
+    "policyName": "Minimum Age Requirement",
+    "description": "Renters must be at least 21 years old. A surcharge of 200 ETB per day may apply for renters aged 21-24. Drivers must possess a valid driver's license for at least one year.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Fueling Policy",
+    "description": "Vehicles are provided with a full tank of fuel and must be returned with a full tank. Otherwise, a refueling service charge of 500 ETB plus the cost of fuel will be applied.",
+    "appliesTo": "All gasoline/diesel vehicles"
+  },
+  {
+    "policyName": "Electric Vehicle Charging Policy",
+    "description": "Electric vehicles must be returned with a minimum of 80% charge. A recharging fee of 750 ETB may apply if returned with a lower charge level.",
+    "appliesTo": "All electric vehicles"
+  },
+  {
+    "policyName": "Late Return Policy",
+    "description": "Returns more than 2 hours late without prior notification may incur an additional day's rental charge. Each additional hour past the grace period will incur a 10% of daily rate fee.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Cleaning Policy",
+    "description": "Vehicles should be returned in a reasonably clean condition. Excessive dirt, stains, or odors (e.g., smoking, pet odors) may result in an additional cleaning fee ranging from 1000 ETB to 5000 ETB.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Geographical Driving Restrictions",
+    "description": "Vehicles are generally restricted to driving within the country of rental (Ethiopia). Travel outside designated areas or specific regions (e.g., restricted national parks) without prior approval is prohibited and may result in penalties.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Cancellation Policy",
+    "description": "Free cancellation up to 48 hours before pick-up time. Cancellations within 24-48 hours may incur a fee equivalent to 50% of one day's rental. Cancellations within 24 hours or no-shows will be charged the full one-day rental fee.",
+    "appliesTo": "All bookings"
+  },
+  {
+    "policyName": "Required Documents",
+    "description": "A valid national driver's license (held for at least one year), a passport or national ID, and a major credit card in the renter's name are strictly required at the time of vehicle pick-up. International driving permits are required for non-residents.",
+    "appliesTo": "All renters"
+  },
+  {
+    "policyName": "Additional Driver Policy",
+    "description": "An additional driver can be added to the rental agreement for a fee of 150 ETB per day. All additional drivers must meet the minimum age requirements and present a valid driver's license.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Roadside Assistance",
+    "description": "Basic roadside assistance is included with every rental. This covers mechanical breakdowns not caused by renter negligence. For issues like flat tires (due to punctures), running out of fuel, or lockout services, additional charges may apply.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Child Safety Seats",
+    "description": "Child safety seats (infant, toddler, booster) are available upon request for an additional daily fee of 100 ETB. Please reserve them in advance to ensure availability.",
+    "appliesTo": "Upon request"
+  },
+  {
+    "policyName": "Smoking Policy",
+    "description": "Smoking (including e-cigarettes and vaping) is strictly prohibited in all rental vehicles. A cleaning fee of 3000 ETB will be charged if evidence of smoking is found.",
+    "appliesTo": "All vehicles"
+  }
+]

@@ -8,7 +8,12 @@ import { signInSocial } from "@/lib/auth/social-auth";
 function OAuthProviders() {
   return (
     <div className="grid grid-cols-2 gap-4">
-      <Button variant="outline" type="button" className="w-full">
+      <Button
+        variant="outline"
+        type="button"
+        className="w-full"
+        onClick={() => signInSocial("github")}
+      >
         <Image
           src="/github.svg"
           alt="github logo"

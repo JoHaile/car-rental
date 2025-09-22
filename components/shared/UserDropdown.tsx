@@ -13,7 +13,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 import { UserCircle2, Mail, ShieldIcon, LucideBookmark } from "lucide-react";
 import SignOut from "../auth/SignOut";
 import { ModeToggle } from "../theme/dark-mode";
-import { User } from "@/app/generated/prisma";
+import { Role, User } from "@/app/generated/prisma";
 
 interface Props {
   user: User | null | undefined;
@@ -27,7 +27,10 @@ function UserDropdown({ user, bookings }: Props) {
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="px-3 h-10 rounded-full">
             <Avatar>
-              <AvatarImage src={user?.image ? user?.image : undefined} />
+              <AvatarImage
+                src={user?.image ? user?.image : undefined}
+                className="size-8 rounded-full overflow-hidden"
+              />
               <AvatarFallback>
                 <UserCircle2 className="size-3/4" />
               </AvatarFallback>
@@ -50,6 +53,9 @@ function UserDropdown({ user, bookings }: Props) {
           <DropdownMenuItem>
             <ShieldIcon />
             {user?.role}
+            {user?.role.includes(Role.Admin) && (
+              <Link href="/dashboard"> Dashboard</Link>
+            )}
           </DropdownMenuItem>
           <Link href="/bookings">
             <DropdownMenuItem>

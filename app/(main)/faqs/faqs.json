@@ -1,0 +1,74 @@
+[
+  {
+    "question": "What is the minimum age requirement to rent a car?",
+    "answer": "Renters must be at least 21 years old. A daily surcharge of 200 ETB per day may apply for renters aged between 21 and 24. All drivers must have held a valid driver's license for a minimum of one year."
+  },
+  {
+    "question": "What documents are required to pick up a rental car?",
+    "answer": "At the time of vehicle pick-up, you are strictly required to present a valid national driver's license (held for at least one year), a passport or national ID, and a major credit card in the renter's name. Non-residents will also need to provide an International Driving Permit."
+  },
+  {
+    "question": "Are there any special requirements for international guests?",
+    "answer": "Yes, international clients are required to provide their international driver's license and passport to qualify for a rental. This ensures compliance with local regulations and our rental terms."
+  },
+  {
+    "question": "How is the security deposit amount determined?",
+    "answer": "The amount of the security deposit required for your rental is determined based on several factors, including the specific vehicle class you choose, the age of the renter/driver, and the level of insurance coverage you opt for. This is calculated to ensure appropriate coverage for the rental period."
+  },
+  {
+    "question": "What kind of insurance is included with the rental, and are there other options?",
+    "answer": "Basic third-party liability insurance is included with all rentals to provide fundamental coverage. For enhanced protection, additional coverage options such as Collision Damage Waiver (CDW), Theft Protection (TP), and Personal Accident Insurance (PAI) are available for purchase. Please note that specific terms, conditions, and exclusions apply to each chosen insurance plan."
+  },
+  {
+    "question": "What payment methods do you accept?",
+    "answer": "We primarily accept major credit cards, including Visa, MasterCard, and American Express, for both rental payments and security deposits. While debit cards may be accepted for rental payment, they must be accompanied by a valid credit card for the security deposit. Please note that cash payments are not accepted."
+  },
+  {
+    "question": "Do you check driving records, and can certain infractions disqualify a renter?",
+    "answer": "Yes, all renters and any authorized additional drivers may be subject to a driving record check to ensure they meet our safety and eligibility criteria. Please be aware that certain driving infractions or a history of serious violations may, unfortunately, disqualify a prospective renter from our service."
+  },
+  {
+    "question": "Who is responsible for traffic violations and tolls during the rental period?",
+    "answer": "The renter is fully responsible for all parking tickets, traffic violations, and tolls that are incurred during the entire rental period. An administration fee may also be applied by our company for the necessary processing and handling of these violations."
+  },
+  {
+    "question": "Are there any prohibited uses for the rental vehicle?",
+    "answer": "Yes, the rental vehicle may not be used for illegal purposes, towing other vehicles, racing, or unauthorized off-roading (unless the vehicle is a specified 4x4 rented for such use). Transporting passengers or property for hire without a specific commercial agreement is also strictly prohibited. Any violation of these terms may result in the immediate termination of the rental agreement and potential penalties."
+  },
+  {
+    "question": "Do you take special requests?",
+    "answer": "Yes, we do take special requests. For any special requests or unique requirements, please inquire by calling us directly at +251 911 000 000. Our team will be happy to assist you."
+  },
+  {
+    "question": "Can I smoke in the vehicle?",
+    "answer": "Smoking (including e-cigarettes and vaping) is strictly prohibited in all rental vehicles. A cleaning fee of 3000 ETB will be charged if evidence of smoking is found."
+  },
+  {
+    "question": "Do rentals have taxes?",
+    "answer": "Yes, all rentals are subject to applicable local and national taxes, including VAT and other government-imposed fees. These taxes will be calculated and added to your total rental cost at the time of booking or pick-up, depending on local regulations."
+  },
+  {
+    "question": "How far can I drive? How many miles per day?",
+    "answer": "Mileage policies vary by vehicle. Some of our vehicles offer unlimited mileage, allowing you to drive as much as you need. Other vehicles may have a specific daily mileage limit, with charges for exceeding that limit. Please check the 'Rental Policies' section for the specific vehicle you are interested in to confirm its mileage terms."
+  },
+  {
+    "question": "How does the rental process work?",
+    "answer": "Once you complete your booking, we will provide you with a unique booking ID that contains all your selected information. When you arrive to pick up your reserved car, you will present this unique booking ID and finalize the payment."
+  },
+  {
+    "question": "Do you offer delivery?",
+    "answer": "Yes, we offer delivery but you have to call us and notify us in a 1-hour window."
+  },
+  {
+    "question": "What is Sedan ?",
+    "answer": "A sedan is a type of passenger car characterized by a three-box configuration with separate compartments for the engine, passengers, and cargo. Sedans typically have four doors and a fixed roof, providing a comfortable and spacious interior for up to five passengers. They are known for their smooth ride, fuel efficiency, and practicality, making them a popular choice for everyday transportation."
+  },
+  {
+    "question": "What is Suv ?",
+    "answer": "An SUV, or Sport Utility Vehicle, is a versatile vehicle designed for both on-road and off-road driving. It typically features a higher ground clearance, four-wheel drive capabilities, and a spacious interior that can accommodate more passengers and cargo than standard cars. SUVs are known for their ruggedness, making them suitable for various terrains, while also providing comfort and advanced safety features for everyday use."
+  },
+  {
+    "question": "What is Luxury ?",
+    "answer": "Luxury vehicles are high-end automobiles that prioritize comfort, performance, and advanced technology. They often feature premium materials, superior craftsmanship, and cutting-edge features such as advanced infotainment systems, high-quality sound systems, and enhanced safety technologies. Luxury cars are designed to provide an exceptional driving experience, with a focus on smooth handling, powerful engines, and a quiet, refined interior."
+  }
+]

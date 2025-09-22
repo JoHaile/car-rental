@@ -88,13 +88,13 @@ async function NavBar() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="flex flex-col gap-2 p-4 text-nowrap">
                     <Link
-                      href="/about"
+                      href="/policies"
                       className="hover:text-primary transition-all duration-150 flex items-center gap-2"
                     >
                       Rental Policies <SquareArrowOutUpRight size={16} />
                     </Link>
                     <Link
-                      href="/about"
+                      href="/requirements"
                       className="hover:text-primary transition-all duration-150 flex items-center gap-2"
                     >
                       Rental Requirements <SquareArrowOutUpRight size={16} />

@@ -1,0 +1,47 @@
+[
+  {
+    "policyName": "Required Documents",
+    "description": "A valid national driver's license (held for at least one year), a passport or national ID, and a major credit card in the renter's name are strictly required at the time of vehicle pick-up. International driving permits are required for non-residents.",
+    "appliesTo": "All renters"
+  },
+  {
+    "policyName": "International Guest",
+    "description": "International clients are required to provide their international drivers license and passport to qualify for a rental.",
+    "appliesTo": "International renters"
+  },
+  {
+    "policyName": "Security Deposit",
+    "description": "The amount of the security deposit required is determined by the vehicle class, the renter/driver’s age and the insurance coverage provided.",
+    "appliesTo": "All rentals"
+  },
+  {
+    "policyName": "Insurance",
+    "description": "Basic third-party liability insurance is included with all rentals. Additional coverage options (e.g., Collision Damage Waiver, Theft Protection, Personal Accident Insurance) are available for purchase to reduce financial liability in case of damage or theft. Specific terms and exclusions apply based on the chosen plan.",
+    "appliesTo": "All rentals"
+  },
+  {
+    "policyName": "Payment Methods",
+    "description": "We accept major credit cards (Visa, MasterCard, American Express) for rental payments and security deposits. Debit cards may be accepted for rental payment if accompanied by a valid credit card for the deposit. Cash is not accepted.",
+    "appliesTo": "All rentals"
+  },
+  {
+    "policyName": "Driving Record Check",
+    "description": "All renters and authorized drivers may be subject to a driving record check to ensure they meet our safety and eligibility criteria. Certain driving infractions may disqualify a renter.",
+    "appliesTo": "All renters and drivers"
+  },
+  {
+    "policyName": "Traffic Violations and Tolls",
+    "description": "The renter is responsible for all parking tickets, traffic violations, and tolls incurred during the rental period. An administration fee may apply for processing these violations.",
+    "appliesTo": "All rentals"
+  },
+  {
+    "policyName": "Minimum Age Requirement",
+    "description": "Renters must be at least 21 years old. A surcharge of 200 ETB per day may apply for renters aged 21-24. Drivers must possess a valid driver's license for at least one year.",
+    "appliesTo": "All vehicles"
+  },
+  {
+    "policyName": "Prohibited Uses",
+    "description": "The rental vehicle may not be used for illegal purposes, towing, racing, off-roading (unless specified for a 4x4), or transporting passengers/property for hire without specific commercial agreement. Violation may result in immediate termination of the rental agreement.",
+    "appliesTo": "All vehicles"
+  }
+]
