@@ -18,21 +18,32 @@ async function FeaturedCars() {
     include: {
       features: true,
     },
+    where: {
+      isAvailable: true,
+    },
   });
 
   return (
     <div className="my-8 w-full flex flex-col items-center justify-center mt-[200px]">
-      <H2 className="mb-16">Featured Cars</H2>
+      <H2 className="mb-16">A Car of Your Choice</H2>
       <Carousel
-        className="w-[65%] md:max-w-11/12"
+        className="w-[65%] md:w-[80%] md:max-w-11/12"
         opts={{
           align: "start",
+          loop: true,
+          slidesToScroll: 1,
+          skipSnaps: false,
         }}
       >
         <CarouselContent>
           {cars.map((car) => (
             <CarouselItem className="sm:basis-1/2 lg:basis-1/3 " key={car.id}>
-              <CarCard car={car} feature={car.features} />
+              <Link
+                href={`/vehicles/${car.id}`}
+                className="hover:scale-105 duration-300"
+              >
+                <CarCard car={car} feature={car.features} />
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

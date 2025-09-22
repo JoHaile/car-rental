@@ -29,9 +29,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="max-w-[1500px] m-auto bg-gradient-to-br from-background to-muted">
-            {children}
-          </main>
+          <main className="max-w-[1500px] m-auto ">{children}</main>
           <Toaster
             closeButton
             position="top-center"

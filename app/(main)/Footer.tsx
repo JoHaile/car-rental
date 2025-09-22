@@ -32,6 +32,14 @@ function Footer() {
           </Link>
         </div>
 
+        {/* Contact Information */}
+        <div className="flex flex-col items-center md:items-end gap-2">
+          <span className="font-bold text-base mb-1">Contact Us</span>
+          <span className="text-sm">support@yourcompany.com</span>
+          <span className="text-sm">+1 (555) 123-4567</span>
+          <span className="text-sm">123 Main St, City, Country</span>
+        </div>
+
         {/* Call to action and copyright */}
         <div className="flex flex-col items-center md:items-end gap-2">
           <Button variant={"ghost"} className="w-full md:w-auto">

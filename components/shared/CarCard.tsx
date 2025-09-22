@@ -36,7 +36,7 @@ async function CarCard({ car, feature }: Props) {
         />
       </div>
       <CardHeader>
-        <CardTitle className="text-2xl font-extrabold">
+        <CardTitle className="text-lg md:text-2xl font-extrabold">
           <div>
             <span className="pr-4">{car?.manufacture}</span>
             <span>{car?.model}</span>
