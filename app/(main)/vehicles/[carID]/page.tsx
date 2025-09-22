@@ -72,10 +72,6 @@ async function page({ params }: Params) {
         carId={car?.id}
         user={user?.user}
       />
-
-      <div id="additional" className="min-h-screen bg-emerald-800 mt-[80px]">
-        <H1 className="text-sm md:text-3xl">Additional Information</H1>
-      </div>
     </div>
   );
 }

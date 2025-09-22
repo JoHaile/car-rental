@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { H1 } from "../Typography";
 import Link from "next/link";
-import DatePicker from "../shared/DatePicker";
 
 function Hero() {
   return (

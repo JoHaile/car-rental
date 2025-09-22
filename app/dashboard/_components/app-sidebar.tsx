@@ -19,6 +19,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import UserDropdown from "@/components/shared/UserDropdown";
 import { User } from "@/app/generated/prisma";
@@ -56,6 +57,9 @@ const items = [
 export function AppSidebar({ user }: { user: User | null }) {
   return (
     <Sidebar>
+      {/* <div >
+        <SidebarTrigger className="-ml-1 cursor-pointer absolute right-3 top-3" />
+      </div> */}
       <SidebarHeader className="border-b border-sidebar-border">
         <div className="flex items-center gap-2 px-2 py-2">
           <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
