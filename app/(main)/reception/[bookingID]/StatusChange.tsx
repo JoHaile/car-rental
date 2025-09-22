@@ -43,6 +43,9 @@ function StatusChange({ bookingID }: { bookingID: string }) {
           <DropdownMenuItem onClick={() => changeStatus("Canceled")}>
             Canceled
           </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => changeStatus("Returned")}>
+            Returned
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

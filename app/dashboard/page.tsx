@@ -2,19 +2,22 @@ import { Role } from "@/app/generated/prisma";
 import getServerSession from "@/lib/auth/get-server-session";
 import { redirect } from "next/navigation";
 import React from "react";
-import AdminDashboard from "./AdminDashboard";
+import Header from "./_components/Header";
+import Dashboard from "./_components/Dashboard";
 
 async function DashboardPage() {
   const session = await getServerSession();
-  const user = session?.user;
 
   if (!session) return redirect("/signup");
 
-  if (user?.role.includes(Role.Customer)) return redirect("/unauthorized");
+  if (session.user?.role.includes(Role.Customer))
+    return redirect("/unauthorized");
 
   return (
-    <div className="h-screen">
-      <AdminDashboard />
+    <div>
+      <Header title="Dashboard" />
+
+      <Dashboard />
     </div>
   );
 }

@@ -54,7 +54,10 @@ function UserDropdown({ user, bookings }: Props) {
             <ShieldIcon />
             {user?.role}
             {user?.role.includes(Role.Admin) && (
-              <Link href="/dashboard"> Dashboard</Link>
+              <Link href="/dashboard" className="text-primary hover:underline">
+                {" "}
+                Dashboard
+              </Link>
             )}
           </DropdownMenuItem>
           <Link href="/bookings">

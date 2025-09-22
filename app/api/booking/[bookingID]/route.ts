@@ -14,12 +14,19 @@ export async function PATCH(request: NextRequest, { params }: Params) {
 
   const body = await request.json();
 
+  const isAvailable = body.status === "Returned" ? true : false;
+
   const booking = await prisma.booking.update({
     where: {
       id: bookingID,
     },
     data: {
       status: body.status,
+      car: {
+        update: {
+          isAvailable: isAvailable,
+        },
+      },
     },
   });
 

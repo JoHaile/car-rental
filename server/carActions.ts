@@ -24,7 +24,9 @@ export const carActions = async (searchParams: any) => {
   const selectedEngineType = searchParams.engineType;
 
   // Dynamically build the where clause based on active filters
-  const whereClause: any = {};
+  const whereClause: any = {
+    isAvailable: true,
+  };
 
   if (selectedManufacturers.length > 0) {
     whereClause.manufacture = {
@@ -33,7 +35,7 @@ export const carActions = async (searchParams: any) => {
   }
 
   // This block handles filters on the features table
-  //! remember in database "engineType" is called "fuelType"
+  //? remember in database "engineType" is called "fuelType"
   if (selectedEngineType || selectedCarTypes.length > 0) {
     whereClause.features = {};
 

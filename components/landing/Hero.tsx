@@ -32,11 +32,14 @@ function Hero() {
           <Link href="/vehicles">
             <Button>Book Now</Button>
           </Link>
+
           <Button
             variant={"outline"}
             className="font-semibold text-primary dark:text-white"
           >
-            Learn More <SquareArrowOutUpRight />
+            <Link href="/about" className="size-full flex items-center gap-2">
+              Learn More <SquareArrowOutUpRight />
+            </Link>
           </Button>
         </div>
       </div>
