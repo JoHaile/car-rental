@@ -4,6 +4,7 @@ import getServerSession from "@/lib/auth/get-server-session";
 import UnauthorizedPage from "@/app/(auth)/unauthorized/page";
 import { Role } from "@/app/generated/prisma";
 import Forbidden from "@/app/(auth)/unauthorized/Forbidden";
+import BookingTable from "@/app/dashboard/bookings/BookingTable";
 
 async function page() {
   const session = await getServerSession();
@@ -12,8 +13,9 @@ async function page() {
   if (session.user.role.includes(Role.Customer)) return <Forbidden />;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen md:max-w-4xl m-auto">
       <Form />
+      <BookingTable />
     </div>
   );
 }

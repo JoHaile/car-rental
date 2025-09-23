@@ -40,7 +40,7 @@ async function vehiclesPage(props: { searchParams: SearchParams }) {
             </div>
 
             {/* all filters */}
-            <div className="space-y-4 hidden sm:block bg-muted rounded-2xl py-4">
+            <div className="space-y-4 hidden sm:block bg-muted rounded-2xl py-4 md:px-3">
               <p>Engine Type</p>
               <EngineTypeFilter />
               <p>Car Type</p>
@@ -91,6 +91,10 @@ async function vehiclesPage(props: { searchParams: SearchParams }) {
               ))}
             </div>
           </div>
+        </div>
+
+        <div id="additional" className="min-h-screen">
+          <H1>Additional Information</H1>
         </div>
       </div>
     </>

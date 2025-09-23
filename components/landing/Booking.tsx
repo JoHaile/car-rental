@@ -36,7 +36,7 @@ function Booking({ pricePerDay, carId, user }: Props) {
       id="booking"
       className="min-h-screen max-w-11/12 md:max-w-5/6 m-auto bg-muted mt-[300px] text-center py-[80px]"
     >
-      <H1>Brand Booking Center</H1>
+      <H1>Gondar Booking</H1>
       <p className="mt-6">
         Fill out the form Below and Get You Confirmation Id in minutes.
       </p>

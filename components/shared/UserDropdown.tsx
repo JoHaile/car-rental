@@ -10,7 +10,13 @@ import {
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
-import { UserCircle2, Mail, ShieldIcon, LucideBookmark } from "lucide-react";
+import {
+  UserCircle2,
+  Mail,
+  ShieldIcon,
+  LucideBookmark,
+  LucideBookmarkPlus,
+} from "lucide-react";
 import SignOut from "../auth/SignOut";
 import { ModeToggle } from "../theme/dark-mode";
 import { Role, User } from "@/app/generated/prisma";
@@ -60,18 +66,23 @@ function UserDropdown({ user, bookings }: Props) {
               </Link>
             )}
           </DropdownMenuItem>
-          <Link href="/bookings">
+
+          {user?.role.includes(Role.Admin) && (
             <DropdownMenuItem>
-              <LucideBookmark />
+              <Link href={"/reception"} className="flex gap-2">
+                <LucideBookmark />
+                Reception
+              </Link>
+            </DropdownMenuItem>
+          )}
+
+          <DropdownMenuItem>
+            <Link href="/bookings" className="flex gap-2">
+              <LucideBookmarkPlus />
               Total Bookings: {bookings}
-            </DropdownMenuItem>
-          </Link>
-          <Link href={"/reception"}>
-            <DropdownMenuItem>
-              <LucideBookmark />
-              Reception
-            </DropdownMenuItem>
-          </Link>
+            </Link>
+          </DropdownMenuItem>
+
           <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
           <DropdownMenuSeparator className="mb-2" />
           <div className="px-2 flex justify-between">

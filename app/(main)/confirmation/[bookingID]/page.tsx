@@ -28,7 +28,8 @@ export default async function ConfirmationPage({ params }: Params) {
           </CardTitle>
           <CardDescription className="text-center text-base mt-2">
             Thank you for booking with{" "}
-            <span className="font-semibold text-primary">Brand</span>.<br />
+            <span className="font-semibold text-primary">Gondar Cars.</span>.
+            <br />
             Your confirmation details are below.
           </CardDescription>
         </CardHeader>

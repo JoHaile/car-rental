@@ -4,14 +4,15 @@ import { redirect } from "next/navigation";
 import React from "react";
 import Header from "./_components/Header";
 import Dashboard from "./_components/Dashboard";
+import Forbidden from "../(auth)/unauthorized/Forbidden";
+import UnauthorizedPage from "../(auth)/unauthorized/page";
 
 async function DashboardPage() {
   const session = await getServerSession();
 
-  if (!session) return redirect("/signup");
+  if (!session) return <UnauthorizedPage />;
 
-  if (session.user?.role.includes(Role.Customer))
-    return redirect("/unauthorized");
+  if (session.user?.role.includes(Role.Customer)) return <Forbidden />;
 
   return (
     <div>

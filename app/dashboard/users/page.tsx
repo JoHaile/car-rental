@@ -2,17 +2,17 @@ import React from "react";
 import Header from "../_components/Header";
 import UserTable from "./UserTable";
 import { H1 } from "@/components/Typography";
-import { redirect } from "next/navigation";
 import { Role } from "@/app/generated/prisma";
 import getServerSession from "@/lib/auth/get-server-session";
+import Forbidden from "@/app/(auth)/unauthorized/Forbidden";
+import UnauthorizedPage from "@/app/(auth)/unauthorized/page";
 
 async function page() {
   const session = await getServerSession();
 
-  if (!session) return redirect("/signup");
+  if (!session) return <UnauthorizedPage />;
 
-  if (session.user?.role.includes(Role.Customer))
-    return redirect("/unauthorized");
+  if (session.user?.role.includes(Role.Customer)) return <Forbidden />;
 
   return (
     <div>

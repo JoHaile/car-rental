@@ -12,7 +12,7 @@ function UnauthorizedPage() {
             You are not Authorized to Visit This Page! Sign up/In to see this
             Page.
           </h1>
-          <Button className="w-full">
+          <Button className="w-full mb-4">
             <Link className="w-full" href="/">
               Back to Home
             </Link>
