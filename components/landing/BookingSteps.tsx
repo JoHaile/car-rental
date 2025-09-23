@@ -85,7 +85,7 @@ function BookingSteps() {
 
         <div className="relative w-3/4 md:w-1/2 h-[500px] md:h-[700px] m-auto ">
           <Image
-            src={"/car-types/suv.png"}
+            src={"/landing/pick-up-car-1.png"}
             alt="car image "
             fill
             className="object-contain"

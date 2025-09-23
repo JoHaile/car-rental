@@ -18,7 +18,7 @@ async function page() {
     <div>
       <Header title="Cars" />
       <H1>Cars Management</H1>
-      <p className="opacity-70 mb-10">Manage your fleet of rental cars</p>
+      <p className="opacity-70 mb-10 mt-4">Manage your fleet of rental cars</p>
       <CarTable />
     </div>
   );

@@ -66,6 +66,12 @@ function UserDropdown({ user, bookings }: Props) {
               Total Bookings: {bookings}
             </DropdownMenuItem>
           </Link>
+          <Link href={"/reception"}>
+            <DropdownMenuItem>
+              <LucideBookmark />
+              Reception
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuLabel className="pt-5">General</DropdownMenuLabel>
           <DropdownMenuSeparator className="mb-2" />
           <div className="px-2 flex justify-between">

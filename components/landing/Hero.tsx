@@ -15,7 +15,6 @@ function Hero() {
           fill
           alt="Hero Image"
         />
-        {/* <div className="absolute size-full bg-muted opacity-20" /> */}
       </div>
 
       <div className="gap-4 absolute text-center top-16 px-5 md:w-3/4 md:space-y-5 text-muted dark:text-white">

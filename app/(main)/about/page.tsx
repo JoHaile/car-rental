@@ -7,9 +7,6 @@ import CallToAction from "@/components/shared/CallToAction";
 import Contact from "../contact/page";
 import Testimonial from "@/components/landing/Testimonial";
 
-// About Page for Car Rental Company
-const COMPANY_NAME = "Your Company Name";
-
 // Main About component
 function About() {
   return (

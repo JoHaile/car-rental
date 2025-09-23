@@ -25,7 +25,7 @@ async function CarTypeStatus() {
         Rented Cars <span>{rentedCars.length} / 70 </span>
       </p>
       <div className="h-2 w-full my-4 bg-accent rounded-full">
-        <div className={`h-2 w-[30%] my-4 bg-primary rounded-full`}></div>
+        <div className={`h-2 w-[45%] my-4 bg-primary rounded-full`}></div>
       </div>
       <p className="flex justify-between">
         Maintenance <span>4 / 70 </span>

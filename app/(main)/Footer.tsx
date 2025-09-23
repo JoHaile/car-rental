@@ -19,12 +19,13 @@ function Footer() {
         </div>
 
         {/* Navigation links */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+        <div className="flex flex-col gap-3 md:gap-4 items-center md:items-start">
+          <h2 className="text-lg font-bold mb-2 text-primary">Links</h2>
           <Link href="/" className="hover:underline">
             Home
           </Link>
           <Link href="/vehicles" className="hover:underline">
-            Vehicles
+            Our Fleets
           </Link>
           <Link href="/bookings" className="hover:underline">
             My Bookings
@@ -34,27 +35,39 @@ function Footer() {
           </Link>
         </div>
 
-        {/* Contact Information */}
-        <div className="flex flex-col items-center md:items-end gap-2">
-          <span className="font-bold text-base mb-1">Contact Us</span>
-          <span className="text-sm">support@yourcompany.com</span>
-          <span className="text-sm">+1 (555) 123-4567</span>
-          <span className="text-sm">123 Main St, City, Country</span>
+        <div className="flex flex-col items-center md:items-start gap-2">
+          <h2 className="text-lg font-bold mb-2 text-primary">Support</h2>
+          <Link href={"/policies"} className="hover:underline">
+            Terms and Services
+          </Link>
+          <Link href={"/requirements"} className="hover:underline">
+            Requirements
+          </Link>
+          <Link href={"/faqs"} className="hover:underline">
+            FAQs
+          </Link>
         </div>
 
         {/* Call to action and copyright */}
-        <div className="flex flex-col items-center md:items-end gap-2">
-          <Button variant={"ghost"} className="w-full md:w-auto">
-            <Link href={"/signup"} className="size-full">
-              Get Started
-            </Link>
-          </Button>
-          <div className="flex gap-5 text-primary">
+        <div className="flex flex-col items-center md:items-start gap-2">
+          <span className="font-bold text-lg text-primary mb-4 ">
+            Contact Us
+          </span>
+
+          <div className="flex gap-5 mb-5 text-primary">
             <Facebook />
             <Twitter />
             <Instagram />
             <Youtube />
           </div>
+
+          {/* Contact Information */}
+          <div className="flex flex-col items-center md:items-start gap-2 ">
+            <span className="text-sm">support@yourcompany.com</span>
+            <span className="text-sm">+1 (555) 123-4567</span>
+            <span className="text-sm">123 Main St, City, Country</span>
+          </div>
+
           <span className="text-xs opacity-70 mt-2">
             &copy; {new Date().getFullYear()} Brand. All rights reserved.
           </span>

@@ -15,7 +15,7 @@ async function Dashboard() {
 
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-      <div className="grid auto-rows-min gap-4 md:grid-cols-4">
+      <div className="grid auto-rows-min gap-4 md:grid-cols-2">
         <div className="aspect-auto rounded-xl bg-muted/50 p-4">
           <h3 className="font-semibold flex items-center justify-between gap-2">
             Total Bookings <LucideBookmarkCheck />
@@ -54,24 +54,16 @@ async function Dashboard() {
       <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 p-4">
         <h2 className="text-xl font-semibold mb-4">Fleet Status</h2>
         <p className="text-muted-foreground">
-          This is the main content area. The sidebar will automatically adjust
-          for mobile devices, showing as an overlay sheet on smaller screens and
-          a collapsible sidebar on desktop.
+          An Overview of the company details.
         </p>
 
         <div className="mt-6 space-y-4 grid grid-cols-2 gap-3">
-          <div className="col-span-2 md:col-span-1 rounded-lg bg-background/50 p-4">
+          <div className="col-span-2 rounded-lg bg-background/50 p-4">
             <h3 className="font-medium"> Fleet Status</h3>
             <p className="text-sm text-muted-foreground mt-2">
               Current status of your car fleet
             </p>
             <CarTypeStatus />
-          </div>
-          <div className="col-span-2 md:col-span-1 rounded-lg bg-background/50 p-4">
-            <h3 className="font-medium">Content Block 2</h3>
-            <p className="text-sm text-muted-foreground mt-2">
-              More content can be added here as needed.
-            </p>
           </div>
         </div>
       </div>
