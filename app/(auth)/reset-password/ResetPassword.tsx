@@ -17,16 +17,17 @@ function ResetPassword() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
-  if (!token) {
-    return <p className="text-destructive">Token not found</p>;
-  }
-
   useEffect(() => {
     state?.successMessage && toast.success(state.successMessage);
     state?.successMessage && router.push("/login");
 
     state?.errorMessage && toast.error(state.errorMessage);
   }, [state]);
+
+  if (!token) {
+    return <p className="text-destructive">Token not found</p>;
+  }
+
   return (
     <div>
       <form
