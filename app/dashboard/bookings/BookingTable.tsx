@@ -30,7 +30,7 @@ async function BookingTable() {
         <TableCaption>Latest Bookings</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="hidden md:block">Booking ID </TableHead>
+            <TableHead>Booking ID </TableHead>
             <TableHead>Customer</TableHead>
             <TableHead>Car</TableHead>
             <TableHead>Status</TableHead>
@@ -40,9 +40,7 @@ async function BookingTable() {
         <TableBody>
           {booking.map((book) => (
             <TableRow key={book.id}>
-              <TableCell className="font-medium hidden md:block">
-                {book.id}
-              </TableCell>
+              <TableCell className="font-medium ">{book.id}</TableCell>
               <TableCell>
                 <p>{book.user?.name}</p>
                 <p className="opacity-70">{book.user?.email}</p>

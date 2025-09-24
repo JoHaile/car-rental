@@ -54,19 +54,14 @@ async function NavBar() {
           <DropdownMenuContent>
             <ul className="flex gap-3 flex-col p-4">
               {pageLinks.map((page) => (
-                <Link
-                  key={page.href}
-                  href={page.href}
-                  className="hover:text-primary transition-all duration-150"
-                >
-                  {page.label === "Company" ? (
-                    <span className="flex gap-2 items-center">
-                      <span>{page.label}</span> <ChevronDown />
-                    </span>
-                  ) : (
+                <DropdownMenuItem key={page.href}>
+                  <Link
+                    href={page.href === "Company" ? "/" : page.href}
+                    className="hover:text-primary transition-all duration-150"
+                  >
                     page.label
-                  )}
-                </Link>
+                  </Link>
+                </DropdownMenuItem>
               ))}
             </ul>
           </DropdownMenuContent>
