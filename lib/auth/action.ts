@@ -72,3 +72,56 @@ export const signOutAction = async () => {
 
   redirect("/login");
 };
+
+export const passwordAction = async (
+  prevState: unknown,
+  formData: FormData
+) => {
+  const email = formData.get("email") as string;
+  try {
+    await auth.api.requestPasswordReset({
+      body: {
+        email,
+        redirectTo: "/reset-password",
+      },
+    });
+
+    return {
+      successMessage:
+        "Reset Link sent Successfully, Check your email for the reset Link.",
+    };
+  } catch (error) {
+    if (error instanceof APIError) {
+      return {
+        email,
+        errorMessage: error.message,
+      };
+    }
+  }
+};
+
+export const resetPasswordAction = async (
+  prevState: unknown,
+  formData: FormData
+) => {
+  const newPassword = formData.get("password") as string;
+  const token = formData.get("token") as string;
+  try {
+    await auth.api.resetPassword({
+      body: {
+        newPassword,
+        token,
+      },
+    });
+
+    return {
+      successMessage: "Password Reset Successfully.",
+    };
+  } catch (error) {
+    if (error instanceof APIError) {
+      return {
+        errorMessage: error.message,
+      };
+    }
+  }
+};

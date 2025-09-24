@@ -80,4 +80,32 @@ export async function sendContactEmail(
   }
 }
 
-export async function sendPasswordResetEmail(userEmail: string) {}
+export async function sendPasswordResetEmail(userEmail: string, url: string) {
+  const mailMessage = {
+    from: "support.carRental@gmail.com",
+    to: userEmail,
+    subject: "Password Reset Form Submission - Car Rental",
+    text: `here is your Password rest link ${url}`,
+
+    headers: {
+      "X-Entity-Ref-ID": "newmail",
+    },
+  };
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.NODEMAILER_USER,
+      pass: process.env.NODEMAILER_PASSWORD,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  try {
+    await transporter.sendMail(mailMessage);
+  } catch (error) {
+    console.log("Something went wrong. Please try again later!", error);
+  }
+}

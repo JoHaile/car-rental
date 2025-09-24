@@ -1,4 +1,5 @@
 "use server";
+
 import { sendContactEmail } from "@/mail/sendEmail";
 
 export async function contactActions(prevState: unknown, formData: FormData) {
@@ -7,8 +8,6 @@ export async function contactActions(prevState: unknown, formData: FormData) {
     email: formData.get("email") as string,
     message: formData.get("message") as string,
   };
-
-  //   console.log(rawFormData);
 
   sendContactEmail(email, name, message);
 }
