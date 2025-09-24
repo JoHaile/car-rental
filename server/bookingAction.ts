@@ -1,5 +1,6 @@
 "use server";
 
+import { sendBookingConformation } from "@/mail/sendEmail";
 import prisma from "@/prisma";
 
 export const bookingAction = async (prevState: unknown, formData: FormData) => {
@@ -43,6 +44,8 @@ export const bookingAction = async (prevState: unknown, formData: FormData) => {
         isAvailable: false,
       },
     });
+
+    await sendBookingConformation(email, booking.id);
 
     return {
       id: booking.id,
