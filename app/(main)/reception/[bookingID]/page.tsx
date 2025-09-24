@@ -95,6 +95,8 @@ async function page({ params }: Params) {
                       variant={
                         booking.status === "Canceled"
                           ? "destructive"
+                          : booking.status === "Pending"
+                          ? "outline"
                           : "default"
                       }
                     >

@@ -59,7 +59,7 @@ async function NavBar() {
                     href={page.href === "Company" ? "/" : page.href}
                     className="hover:text-primary transition-all duration-150"
                   >
-                    page.label
+                    {page.label}
                   </Link>
                 </DropdownMenuItem>
               ))}

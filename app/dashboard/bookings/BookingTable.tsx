@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import prisma from "@/prisma";
+import Link from "next/link";
 import React from "react";
 
 async function BookingTable() {
@@ -40,7 +41,9 @@ async function BookingTable() {
         <TableBody>
           {booking.map((book) => (
             <TableRow key={book.id}>
-              <TableCell className="font-medium ">{book.id}</TableCell>
+              <TableCell className="font-medium ">
+                <Link href={`/reception/${book.id}`}>{book.id}</Link>
+              </TableCell>
               <TableCell>
                 <p>{book.user?.name}</p>
                 <p className="opacity-70">{book.user?.email}</p>
