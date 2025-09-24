@@ -9,7 +9,9 @@ function page() {
 
       <p>Enter your new Password here.</p>
 
-      <Suspense children={<ResetPassword />} fallback={"Loading..."} />
+      <Suspense fallback={"Loading..."}>
+        <ResetPassword />
+      </Suspense>
     </div>
   );
 }
