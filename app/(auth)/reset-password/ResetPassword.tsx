@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useActionState, useEffect } from "react";
+import React, { Suspense, useActionState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { resetPasswordAction } from "@/lib/auth/action";
@@ -9,13 +9,15 @@ import { Label } from "recharts";
 import { toast } from "sonner";
 
 function ResetPassword() {
+  const router = useRouter();
+
+  const searchParams = useSearchParams();
+  const token = searchParams.get("token");
+
   const [state, formAction, isPending] = useActionState(
     resetPasswordAction,
     undefined
   );
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const token = searchParams.get("token");
 
   useEffect(() => {
     state?.successMessage && toast.success(state.successMessage);

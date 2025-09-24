@@ -1,5 +1,5 @@
 import { H1 } from "@/components/Typography";
-import React from "react";
+import React, { Suspense } from "react";
 import ResetPassword from "./ResetPassword";
 
 function page() {
@@ -9,7 +9,7 @@ function page() {
 
       <p>Enter your new Password here.</p>
 
-      <ResetPassword />
+      <Suspense children={<ResetPassword />} fallback={"Loading..."} />
     </div>
   );
 }
