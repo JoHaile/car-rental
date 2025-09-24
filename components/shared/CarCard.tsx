@@ -10,6 +10,8 @@ import {
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { Car, Features } from "@/app/generated/prisma";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 interface Props {
   car: Car;
@@ -18,7 +20,7 @@ interface Props {
 
 async function CarCard({ car, feature }: Props) {
   return (
-    <Card className="max-w-[300px] md:max-w-[320px] lg:max-w-[350px] pt-0 overflow-hidden relative mb-[70px]">
+    <Card className="max-w-[300px] md:max-w-[320px] lg:max-w-[350px] pt-0 overflow-hidden relative mb-[70px] hover:scale-105 duration-200">
       <div className="absolute top-3 left-3 space-x-3">
         <Badge variant={"destructive"}>New</Badge>
         {car?.isAvailable !== true && (
@@ -70,6 +72,14 @@ async function CarCard({ car, feature }: Props) {
           {car?.pricePerDay} Birr / day
         </CardAction>
       </CardFooter>
+
+      <div className="px-4">
+        <Button className="w-full">
+          <Link className="size-full" href={`vehicles/${car.id}`}>
+            Book Now
+          </Link>
+        </Button>
+      </div>
     </Card>
   );
 }

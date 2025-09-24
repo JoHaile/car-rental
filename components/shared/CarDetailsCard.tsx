@@ -79,11 +79,6 @@ function CarDetailsCard({ car, feature }: Props) {
               Book This Car
             </Link>
           </Button>
-          <Button variant={"outline"}>
-            <Link href={"#additional"} className="w-full h-full">
-              See Additional information
-            </Link>
-          </Button>
         </div>
       </Card>
     </div>

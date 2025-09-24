@@ -1,5 +1,4 @@
 import React from "react";
-import { H2, H3 } from "../Typography";
 import Image from "next/image";
 
 function Services() {
