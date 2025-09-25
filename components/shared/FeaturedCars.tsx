@@ -38,12 +38,7 @@ async function FeaturedCars() {
         <CarouselContent>
           {cars.map((car) => (
             <CarouselItem className="sm:basis-1/2 lg:basis-1/3 " key={car.id}>
-              <Link
-                href={`/vehicles/${car.id}`}
-                className="hover:scale-105 duration-300"
-              >
-                <CarCard car={car} feature={car.features} />
-              </Link>
+              <CarCard car={car} feature={car.features} />
             </CarouselItem>
           ))}
         </CarouselContent>

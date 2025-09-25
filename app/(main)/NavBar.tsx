@@ -56,8 +56,8 @@ async function NavBar() {
               {pageLinks.map((page) => (
                 <DropdownMenuItem key={page.href}>
                   <Link
-                    href={page.href === "Company" ? "/" : page.href}
-                    className="hover:text-primary transition-all duration-150"
+                    href={page.href === "company" ? "/" : page.href}
+                    className="hover:text-primary transition-all duration-150 size-full"
                   >
                     {page.label}
                   </Link>
@@ -130,8 +130,7 @@ const pageLinks = [
   { label: "Home", href: "/" },
   { label: "Vehicles", href: "/vehicles" },
   { label: "About Us", href: "/about" },
-  { label: "Company", href: "/company" },
-  // { label: "Business", href: "/business" },
+  { label: "Company", href: "/policies" },
   { label: "Contact", href: "/contact" },
 ];
 

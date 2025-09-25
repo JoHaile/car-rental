@@ -4,7 +4,6 @@ import BookingTable from "./BookingTable";
 import { H1 } from "@/components/Typography";
 import { Role } from "@/app/generated/prisma";
 import getServerSession from "@/lib/auth/get-server-session";
-import { redirect } from "next/navigation";
 import Forbidden from "@/app/(auth)/unauthorized/Forbidden";
 import UnauthorizedPage from "@/app/(auth)/unauthorized/page";
 

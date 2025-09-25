@@ -81,20 +81,10 @@ async function vehiclesPage(props: { searchParams: SearchParams }) {
                 </p>
               )}
               {cars.map((car) => (
-                // <Link
-                //   key={car.id}
-                //   href={`/vehicles/${car.id}`}
-                //   className="hover:scale-103 transition-all duration-200"
-                // >
                 <CarCard car={car} key={car.id} feature={car.features} />
-                // </Link>
               ))}
             </div>
           </div>
-        </div>
-
-        <div id="additional" className="min-h-screen">
-          <H1>Additional Information</H1>
         </div>
       </div>
     </>

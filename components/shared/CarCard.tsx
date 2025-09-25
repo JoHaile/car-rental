@@ -74,7 +74,7 @@ async function CarCard({ car, feature }: Props) {
       </CardFooter>
 
       <div className="px-4">
-        <Button className="w-full">
+        <Button className="w-full" asChild>
           <Link className="size-full" href={`vehicles/${car.id}`}>
             Book Now
           </Link>
