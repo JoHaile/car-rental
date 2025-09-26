@@ -34,7 +34,7 @@ function Booking({ pricePerDay, carId, user }: Props) {
   return (
     <div
       id="booking"
-      className="min-h-screen max-w-11/12 md:max-w-5/6 m-auto bg-muted mt-[300px] text-center py-[80px]"
+      className="min-h-screen max-w-11/12 md:max-w-5/6 m-auto bg-muted mt-[300px] text-center py-[80px] ring-1 ring-muted-foreground rounded-3xl"
     >
       <H1>Gondar Booking</H1>
       <p className="mt-6">

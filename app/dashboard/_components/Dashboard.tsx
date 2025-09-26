@@ -54,7 +54,7 @@ async function Dashboard() {
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
       <div className="grid auto-rows-min gap-4 md:grid-cols-2">
-        <div className="aspect-auto rounded-xl bg-muted/50 p-4">
+        <div className="aspect-auto rounded-xl bg-muted p-4">
           <h3 className="font-semibold flex items-center justify-between gap-2">
             Total Bookings <LucideBookmarkCheck />
           </h3>
@@ -62,7 +62,7 @@ async function Dashboard() {
             {bookings.length} bookings made.
           </p>
         </div>
-        <div className="aspect-auto rounded-xl bg-muted/50 p-4">
+        <div className="aspect-auto rounded-xl bg-muted p-4">
           <h3 className="font-semibold flex items-center justify-between gap-2">
             Total Users <UserCheck2 />
           </h3>
@@ -70,7 +70,7 @@ async function Dashboard() {
             {user.length} users registered.
           </p>
         </div>
-        <div className="aspect-auto rounded-xl bg-muted/50 p-4">
+        <div className="aspect-auto rounded-xl bg-muted p-4">
           <h3 className="font-semibold flex items-center justify-between gap-2">
             Total Cars <Car />
           </h3>
@@ -78,7 +78,7 @@ async function Dashboard() {
             {cars.length} cars available.
           </p>
         </div>
-        <div className="aspect-auto rounded-xl bg-muted/50 p-4">
+        <div className="aspect-auto rounded-xl bg-muted p-4">
           <h3 className="font-semibold flex items-center justify-between gap-2">
             Total Revenue <LucideBadgeDollarSign />
           </h3>
@@ -89,7 +89,7 @@ async function Dashboard() {
         </div>
       </div>
 
-      <div className="min-h-[80vh] flex-1 rounded-xl bg-muted/50 p-4">
+      <div className="min-h-[80vh] flex-1 rounded-xl bg-muted p-4">
         <h2 className="text-xl font-semibold mb-4">Fleet Status</h2>
         <p className="text-muted-foreground">
           An Overview of the company details.
