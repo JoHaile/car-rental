@@ -52,6 +52,11 @@ const items = [
     url: "/dashboard/users",
     icon: UserIcon,
   },
+  {
+    title: "Reception",
+    url: "/dashboard/reception",
+    icon: UserIcon,
+  },
 ];
 
 export function AppSidebar({ user }: { user: User | null }) {

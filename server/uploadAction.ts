@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/prisma";
+import { revalidatePath } from "next/cache";
 
 // Define the shape of the state returned by the action
 type FormState = {
@@ -81,6 +82,7 @@ export async function createCar(
         "Invalid number format for Year, Price, Mileage, or Seating Capacity.",
     };
   }
+
   if (enginePowerStr && isNaN(enginePower as number)) {
     return {
       success: false,

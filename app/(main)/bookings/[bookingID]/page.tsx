@@ -11,7 +11,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Calendar, Car, User2, Mail, KeyRound, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import prisma from "@/prisma";
-import StatusChange from "../../reception/[bookingID]/StatusChange";
+import StatusChange from "../../../dashboard/reception/[bookingID]/StatusChange";
 import { Role } from "@/app/generated/prisma";
 
 interface Params {

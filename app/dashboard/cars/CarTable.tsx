@@ -10,6 +10,7 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import prisma from "@/prisma";
+import Link from "next/link";
 import React from "react";
 
 async function CarTable() {
@@ -40,8 +41,10 @@ async function CarTable() {
           {cars.map((car) => (
             <TableRow key={car.id}>
               <TableCell className="font-medium">
-                <span>{car.manufacture}</span> <span>{car.model}</span>
-                <p className="opacity-70">{car.year}</p>
+                <Link href={`/vehicles/${car.id}`}>
+                  <span>{car.manufacture}</span> <span>{car.model}</span>
+                  <p className="opacity-70">{car.year}</p>
+                </Link>
               </TableCell>
               <TableCell className="font-medium hidden md:block">
                 {car.licensePlate}
@@ -57,7 +60,7 @@ async function CarTable() {
                 {car.isAvailable ? (
                   <Badge>Available</Badge>
                 ) : (
-                  <Badge variant={"destructive"}>Rented</Badge>
+                  <Badge variant={"destructive"}>Booked</Badge>
                 )}
               </TableCell>
             </TableRow>

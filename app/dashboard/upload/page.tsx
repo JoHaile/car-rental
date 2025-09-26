@@ -3,6 +3,19 @@
 import { useActionState, useEffect, useRef } from "react";
 import { createCar } from "@/server/uploadAction";
 import { useFormStatus } from "react-dom";
+import { toast } from "sonner";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
+// 💡 New: Import the Label component
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 // Initial state for useActionState
 const initialState = {
@@ -10,201 +23,230 @@ const initialState = {
   message: "",
 };
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      className={`w-full py-2 px-4 rounded-md text-white font-semibold transition-colors 
-        ${
-          pending
-            ? "bg-indigo-400 cursor-not-allowed"
-            : "bg-indigo-600 hover:bg-indigo-700"
-        }`}
-    >
-      {pending ? "Adding Car..." : "Add Car & Features"}
-    </button>
-  );
-}
-
 export default function AdminAddCarForm() {
   const [state, formAction] = useActionState(createCar, initialState);
   const formRef = useRef<HTMLFormElement>(null);
+  const { pending } = useFormStatus();
 
-  // Reset the form upon successful submission
   useEffect(() => {
     if (state.success && formRef.current) {
       formRef.current.reset();
     }
-  }, [state.success]);
+
+    state.success && toast.success(state.message);
+    state.message && !state.success && toast.error(state.message);
+  }, [state.success, state.message]);
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-lg">
-      <h2 className="text-3xl font-bold mb-6 text-gray-800">
-        New Car & Features Registration
-      </h2>
-
-      {/* Feedback Message Area */}
-      {state.message && (
-        <div
-          className={`p-3 mb-4 rounded-md text-sm font-medium 
-            ${
-              state.success
-                ? "bg-green-100 text-green-700 border border-green-300"
-                : "bg-red-100 text-red-700 border border-red-300"
-            }`}
-          role="alert"
-        >
-          {state.message}
-        </div>
-      )}
-
+    <div className="max-w-5xl w-full mx-auto py-10">
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold tracking-tight mb-2 text-center">
+          New Car & Features Registration
+        </h2>
+        <p className="text-muted-foreground text-center">
+          Fill in the details below to add a new car to your fleet.
+        </p>
+      </div>
       <form ref={formRef} action={formAction} className="space-y-8">
         {/* === CAR DETAILS SECTION === */}
-        <fieldset className="border p-6 rounded-lg space-y-4">
-          <legend className="text-xl font-semibold text-gray-700">
-            Car Details
-          </legend>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Manufacture, Model */}
-            <input
-              type="text"
-              name="manufacture"
-              required
-              placeholder="Manufacturer *"
-              className="p-3 border rounded-md"
-            />
-            <input
-              type="text"
-              name="model"
-              required
-              placeholder="Model *"
-              className="p-3 border rounded-md"
-            />
+        <div className="rounded-xl border bg-card text-card-foreground shadow-sm">
+          <div className="p-6 border-b">
+            <h3 className="text-xl font-semibold">Car Details</h3>
+          </div>
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Manufacture */}
+            <div className="space-y-1">
+              <Label htmlFor="manufacture">Manufacturer *</Label>
+              <Input
+                type="text"
+                id="manufacture"
+                name="manufacture"
+                required
+                placeholder="e.g., Toyota"
+              />
+            </div>
 
-            {/* Year, License Plate */}
-            <input
-              type="number"
-              name="year"
-              required
-              min="1900"
-              placeholder="Year *"
-              className="p-3 border rounded-md"
-            />
-            <input
-              type="text"
-              name="licensePlate"
-              required
-              placeholder="License Plate * (Unique)"
-              className="p-3 border rounded-md"
-            />
+            {/* Model */}
+            <div className="space-y-1">
+              <Label htmlFor="model">Model *</Label>
+              <Input
+                type="text"
+                id="model"
+                name="model"
+                required
+                placeholder="e.g., Camry"
+              />
+            </div>
 
-            {/* Price Per Day, Mileage */}
-            <input
-              type="number"
-              name="pricePerDay"
-              required
-              step="0.01"
-              min="0.01"
-              placeholder="Price Per Day (USD) *"
-              className="p-3 border rounded-md"
-            />
-            <input
-              type="number"
-              name="mileage"
-              required
-              min="0"
-              placeholder="Mileage (km/mi) *"
-              className="p-3 border rounded-md"
-            />
+            {/* Year */}
+            <div className="space-y-1">
+              <Label htmlFor="year">Year *</Label>
+              <Input
+                type="number"
+                id="year"
+                name="year"
+                required
+                min="1900"
+                placeholder="e.g., 2024"
+              />
+            </div>
 
-            {/* Image URLs */}
-            <div className="sm:col-span-2">
-              <textarea
+            {/* License Plate */}
+            <div className="space-y-1">
+              <Label htmlFor="licensePlate">License Plate * (Unique)</Label>
+              <Input
+                type="text"
+                id="licensePlate"
+                name="licensePlate"
+                required
+                placeholder="e.g., XYZ-123"
+              />
+            </div>
+
+            {/* Price Per Day */}
+            <div className="space-y-1">
+              <Label htmlFor="pricePerDay">Price Per Day (Birr) *</Label>
+              <Input
+                type="number"
+                id="pricePerDay"
+                name="pricePerDay"
+                required
+                step="0.01"
+                min="0.01"
+                placeholder="e.g., 50.00"
+              />
+            </div>
+
+            {/* Mileage */}
+            <div className="space-y-1">
+              <Label htmlFor="mileage">Mileage (km/mi) *</Label>
+              <Input
+                type="number"
+                id="mileage"
+                name="mileage"
+                required
+                min="0"
+                placeholder="e.g., 15000"
+              />
+            </div>
+
+            {/* Description */}
+            <div className="sm:col-span-2 space-y-1">
+              <Label htmlFor="description">Description (Optional)</Label>
+              <Textarea
+                id="description"
                 name="description"
                 rows={2}
-                placeholder="Description (Optional)"
-                className="w-full p-3 border rounded-md"
-              ></textarea>
+                placeholder="Brief description of the vehicle's condition or features."
+                className="w-full p-3 border rounded-md" // Keeping original Tailwind styling for textarea
+              ></Textarea>
             </div>
-            <div className="sm:col-span-2">
-              <input
+
+            {/* Image URLs */}
+            <div className="sm:col-span-2 space-y-1">
+              <Label htmlFor="imageUrls">
+                Image URLs (Comma-separated list, Optional)
+              </Label>
+              <Input
                 type="text"
+                id="imageUrls"
                 name="imageUrls"
-                placeholder="Image URLs (Comma-separated: url1, url2...)"
-                className="w-full p-3 border rounded-md"
+                placeholder="url1.jpg, url2.png, url3.webp"
               />
             </div>
           </div>
-        </fieldset>
+        </div>
 
         {/* === FEATURES DETAILS SECTION === */}
-        <fieldset className="border p-6 rounded-lg space-y-4">
-          <legend className="text-xl font-semibold text-gray-700">
-            Static Features
-          </legend>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Seating Capacity, Engine Power */}
-            <input
-              type="number"
-              name="seatingCapacity"
-              required
-              min="1"
-              placeholder="Seating Capacity *"
-              className="p-3 border rounded-md"
-            />
-            <input
-              type="number"
-              name="enginePower"
-              min="1"
-              placeholder="Engine Power (HP, Optional)"
-              className="p-3 border rounded-md"
-            />
+        <div className="rounded-xl border bg-card text-card-foreground shadow-sm">
+          <div className="p-6 border-b">
+            <h3 className="text-xl font-semibold">Static Features</h3>
+          </div>
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Seating Capacity */}
+            <div className="space-y-1">
+              <Label htmlFor="seatingCapacity">Seating Capacity *</Label>
+              <Input
+                type="number"
+                id="seatingCapacity"
+                name="seatingCapacity"
+                required
+                min="1"
+                placeholder="e.g., 5"
+              />
+            </div>
+
+            {/* Engine Power */}
+            <div className="space-y-1">
+              <Label htmlFor="enginePower">Engine Power (HP, Optional)</Label>
+              <Input
+                type="number"
+                id="enginePower"
+                name="enginePower"
+                min="1"
+                placeholder="e.g., 180"
+              />
+            </div>
 
             {/* Transmission */}
-            <select
-              name="transmission"
-              required
-              className="p-3 border rounded-md bg-white"
-            >
-              <option value="">Select Transmission *</option>
-              <option value="Automatic">Automatic</option>
-              <option value="Manual">Manual</option>
-            </select>
+            <div className="space-y-1">
+              <Label htmlFor="transmission">Transmission *</Label>
+              <Select name="transmission" required>
+                <SelectTrigger id="transmission" className="w-full">
+                  <SelectValue placeholder="Select Transmission *" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="AUTOMATIC">Automatic</SelectItem>
+                  <SelectItem value="MANUAL">Manual</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Fuel Type */}
-            <select
-              name="fuelType"
-              required
-              className="p-3 border rounded-md bg-white"
-            >
-              <option value="">Select Fuel Type *</option>
-              <option value="Gasoline">Gasoline</option>
-              <option value="Diesel">Diesel</option>
-              <option value="Electric">Electric</option>
-              <option value="Hybrid">Hybrid</option>
-            </select>
+            <div className="space-y-1">
+              <Label htmlFor="fuelType">Fuel Type *</Label>
+              <Select name="fuelType" required>
+                <SelectTrigger id="fuelType" className="w-full">
+                  <SelectValue placeholder="Select Fuel Type *" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="GASOLINE">Gasoline</SelectItem>
+                  <SelectItem value="ELECTRIC">Electric</SelectItem>
+                  <SelectItem value="HYBRID">Hybrid</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Car Type */}
-            <select
-              name="carType"
-              required
-              className="p-3 border rounded-md bg-white sm:col-span-2"
-            >
-              <option value="">Select Car Type *</option>
-              <option value="Sedan">Sedan</option>
-              <option value="SUV">SUV</option>
-              <option value="Truck">Truck</option>
-              <option value="Hatchback">Hatchback</option>
-              <option value="Sports">Sports</option>
-            </select>
+            <div className="sm:col-span-2 space-y-1">
+              <Label htmlFor="carType">Car Type *</Label>
+              <Select name="carType" required>
+                <SelectTrigger id="carType" className="w-full">
+                  <SelectValue placeholder="Select Car Type *" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="SEDAN">Sedan</SelectItem>
+                  <SelectItem value="SUV">SUV</SelectItem>
+                  <SelectItem value="LUXURY">Luxury</SelectItem>
+                  <SelectItem value="COUPE">Coupe</SelectItem>
+                  <SelectItem value="TRUCK">Truck</SelectItem>
+                  <SelectItem value="MINIVAN">Minivan</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
-        </fieldset>
+        </div>
 
         {/* Submit Button */}
-        <SubmitButton />
+        <div className="flex justify-end">
+          <Button
+            disabled={pending}
+            type="submit"
+            className="px-8 py-2 text-base font-semibold"
+          >
+            {pending ? "Adding Car..." : "Create Car"}
+          </Button>
+        </div>
       </form>
     </div>
   );

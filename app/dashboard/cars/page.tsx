@@ -7,6 +7,9 @@ import getServerSession from "@/lib/auth/get-server-session";
 import { redirect } from "next/navigation";
 import Forbidden from "@/app/(auth)/unauthorized/Forbidden";
 import UnauthorizedPage from "@/app/(auth)/unauthorized/page";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Plus } from "lucide-react";
 
 async function page() {
   const session = await getServerSession();
@@ -18,8 +21,22 @@ async function page() {
   return (
     <div>
       <Header title="Cars" />
-      <H1>Cars Management</H1>
-      <p className="opacity-70 mb-10 mt-4">Manage your fleet of rental cars</p>
+      <div className="flex items-center justify-between px-5 mb-4">
+        <div>
+          <H1>Cars Management</H1>
+          <p className="opacity-70 mb-10 mt-4">
+            Manage your fleet of rental cars
+          </p>
+        </div>
+        <Button>
+          <Link
+            href={"/dashboard/upload"}
+            className="size-full flex items-center gap-2"
+          >
+            <Plus /> Add New Car
+          </Link>
+        </Button>
+      </div>
       <CarTable />
     </div>
   );

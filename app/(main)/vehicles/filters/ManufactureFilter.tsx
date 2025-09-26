@@ -46,7 +46,7 @@ function ManufactureFilter({ allManufactures }: ManufactureFilterProps) {
     <div className="space-y-2">
       <div
         className={`overflow-hidden transition-all duration-300 space-y-2 ${
-          showAll ? "max-h-96" : "max-h-40"
+          showAll ? "max-h-[700px]" : "max-h-40"
         }`}
       >
         {visible.map((man) => (
