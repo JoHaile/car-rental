@@ -24,6 +24,8 @@ async function CarTable() {
 
   return (
     <div>
+      <H2 className="mt-[50px]">Latest Cars</H2>
+
       <Table className="pl-2 md:pl-0">
         <TableCaption>Some of the car</TableCaption>
         <TableHeader>
@@ -41,7 +43,10 @@ async function CarTable() {
           {cars.map((car) => (
             <TableRow key={car.id}>
               <TableCell className="font-medium">
-                <Link href={`/vehicles/${car.id}`}>
+                <Link
+                  href={`/vehicles/${car.id}`}
+                  className="hover:underline hover:text-primary"
+                >
                   <span>{car.manufacture}</span> <span>{car.model}</span>
                   <p className="opacity-70">{car.year}</p>
                 </Link>

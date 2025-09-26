@@ -17,6 +17,7 @@ async function UserTable() {
       bookings: true,
     },
   });
+
   return (
     <div>
       <Table>

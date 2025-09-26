@@ -16,6 +16,7 @@ import {
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Header from "../../_components/Header";
 
 interface Params {
   params: Promise<{ bookingID: string }>;
@@ -66,6 +67,8 @@ async function page({ params }: Params) {
 
   return (
     <div className="min-h-screen">
+      <Header title="Reception" />
+
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted px-4 py-12">
         <Card className="w-full max-w-3xl shadow-2xl border-0 bg-white/90 dark:bg-zinc-900/90 animate-in fade-in zoom-in-50">
           <CardHeader className="flex flex-col items-center gap-2">

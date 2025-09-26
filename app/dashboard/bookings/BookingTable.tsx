@@ -42,7 +42,12 @@ async function BookingTable() {
           {booking.map((book) => (
             <TableRow key={book.id}>
               <TableCell className="font-medium ">
-                <Link href={`/dashboard/reception/${book.id}`}>{book.id}</Link>
+                <Link
+                  href={`/dashboard/reception/${book.id}`}
+                  className="hover:underline hover:text-primary"
+                >
+                  {book.id}
+                </Link>
               </TableCell>
               <TableCell>
                 <p>{book.user?.name}</p>

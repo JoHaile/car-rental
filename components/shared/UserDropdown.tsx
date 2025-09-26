@@ -69,7 +69,7 @@ function UserDropdown({ user, bookings }: Props) {
 
           {user?.role.includes(Role.Admin) && (
             <DropdownMenuItem>
-              <Link href={"/reception"} className="flex gap-2">
+              <Link href={"/dashboard/reception"} className="flex gap-2">
                 <LucideBookmark />
                 Reception
               </Link>
