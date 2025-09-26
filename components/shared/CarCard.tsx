@@ -30,7 +30,7 @@ async function CarCard({ car, feature }: Props) {
 
       <div className="h-[200px] w-full">
         <Image
-          src={car?.imageUrls[2] ? car?.imageUrls[2] : "/hero-2.jpg"}
+          src={car?.imageUrls[0] ? car?.imageUrls[0] : "/hero-2.jpg"}
           alt="Car Image"
           className="aspect-[16/9] object-cover"
           width={500}
