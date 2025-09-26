@@ -11,7 +11,7 @@ function Form() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    inputValue ? router.push("/reception/" + inputValue) : null;
+    inputValue ? router.push("/dashboard/" + inputValue) : null;
   };
 
   return (
