@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Rental Web App
+
+A full-stack car rental platform built with Next.js, PostgreSQL, Prisma, and a component-driven UI. The application supports customer authentication, vehicle browsing, rental bookings, and an admin dashboard for managing the rental operation.
+
+## Overview
+
+The project models a complete rental workflow around users, vehicles, vehicle specifications, availability, and bookings. Customers can browse available cars and submit rental requests, while administrators can manage the operational side through a protected dashboard.
+
+## Features
+
+- Vehicle catalog and car-detail experience
+- Availability-aware rental workflow
+- Customer signup and authentication
+- Role-based access for customers and administrators
+- Booking creation and management
+- Rental status tracking
+- Admin dashboard
+- Vehicle specifications such as type, fuel, transmission, seating, mileage, and engine power
+- Transactional email integration
+- Responsive UI with reusable components
+- PostgreSQL relational data model
+
+## Tech Stack
+
+- **Framework:** Next.js 15, React 19, TypeScript
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **Authentication:** Better Auth
+- **UI:** Tailwind CSS, Radix UI, Lucide
+- **Forms & Validation:** React Hook Form, Zod
+- **Data & Charts:** Recharts
+- **Email:** Nodemailer
+- **Media:** next-cloudinary
+- **Internationalization:** next-intl
+- **Notifications:** Sonner
+
+## Data Model
+
+The core relational model includes:
+
+- **Users** with Customer/Admin roles
+- **Cars** with pricing, availability, mileage, images, and specifications
+- **Features** for vehicle specifications
+- **Bookings** linked to cars and users
+- **Sessions, accounts, and verification records** for authentication
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/JoHaile/car-rental.git
+cd car-rental
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env` file in the project root and configure the environment variables required by the application, including the PostgreSQL database and authentication/email services.
+
+### 4. Set up the database
+
+```bash
+npx prisma generate
+npx prisma migrate dev
+```
+
+The repository also includes Prisma seed data for development.
+
+### 5. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+app/
+├── (auth)/        # Authentication and authorization pages
+├── (main)/        # Public rental experience
+├── api/           # Application API routes
+└── dashboard/     # Protected admin dashboard
 
-## Learn More
+components/        # Reusable UI components
+lib/               # Auth and application utilities
+mail/              # Email-related functionality
+prisma/            # Schema, migrations, and seed data
+server/             # Server-side application logic
+public/             # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Focus
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project demonstrates full-stack application development with authentication, role-based access control, relational data modeling, booking workflows, protected administration, and responsive UI development.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
+**Yohannes Haile**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Full-Stack Developer specializing in Next.js, React, TypeScript, and Node.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub: https://github.com/JoHaile
+- LinkedIn: https://www.linkedin.com/in/johnny-haile/
+
